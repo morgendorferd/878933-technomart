@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Дарья Хохлова](https://up.htmlacademy.ru/htmlcss/23/user/878933).
-* Наставник: [Макс Кравченко](https://htmlacademy.ru/profile/dreamoctober).
+* Наставник: [Макс Dream October Кравченко](https://htmlacademy.ru/profile/dreamoctober).
 
 ---
 
