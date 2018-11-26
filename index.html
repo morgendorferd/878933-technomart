@@ -8,9 +8,8 @@
     <header class="header-main">
       <section class="header-top">
         <a class="header-logo">
-          <img src="main-logo.png" width="220" height="47" alt="Логотип магазина Техномарт">
+          <img src="img/content-img/main-logo.jpg" width="220" height="47" alt="Логотип магазина Техномарт">
         </a>
-        <!--Здесь будет форма Поиска-->
         <ul class="header-top-list">
           <li class="header-top-item">
             <a href="#">Закладки:
@@ -95,7 +94,7 @@
       <section class="main-contacts">
         <h3 class="main-contacts-title">Контакты</h3>
         <p class="main-contacts contacts-desc">Вы можете забрать товар сами, заехав в наш офис:</p>
-        <img src="map-contacts.png" width="300" height="158" alt="Как нас найти">
+        <img src="img/content-img/map-contacts.jpg" width="300" height="158" alt="Как нас найти">
         <a class="main-contacts contacts-link" href="mailto:tehnomart@mail.ru">Заблудились? Напишите нам!</a>
       </section>
     </main>
@@ -104,7 +103,7 @@
     <footer class="footer-main">
       <section class="footer-top">
         <a class="footer-logo">
-          <img src="main-logo.png" width="220" height="47" alt="Логотип магазина Техномарт">
+          <img src="img/content-img/main-logo.jpg" width="220" height="47" alt="Логотип магазина Техномарт">
         </a>
          <nav class="footer-nav">
           <ul class="footer-nav-list">
@@ -170,24 +169,26 @@
     </footer>
 
     <section class="modal modal-write-us">
-      <p class="modal-write-us-name">Ваше имя:</p>
-      <!--Здесь будет форма-->
-      <p class="modal-write-us-email">Ваш e-mail:</p>
-      <!--Здесь будет форма-->
-      <p class="modal-write-us-letter">Текст письма:</p>
-      <!--Здесь будет форма-->
-      <button type="submit" name="write-us">Отправить</button>
-      <button type="button" name="write-us-close">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
+      <form class="modal-letter" action="index.html" method="post">
+        <input type="text" id="user-name" name="name" placeholder="Имя Фамилия">
+        <label for="user-name">Ваше имя:</label>
+        <input type="email" id="user-email" name="email" placeholder="email@example.com">
+        <label for="user-email">Ваш e-mail:</label>
+        <textarea name="letter" id="user-letter" placeholder="В свободной форме">Текст письма:</textarea>
+        <button type="submit" name="btn-send">Отправить</button>
+        <button type="button" name="btn-close">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </form>
+
     </section>
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <a href="https://www.google.ru/maps?hl=ru">
-        <img src="map-popup.png" width="940" height="447" alt="Большая Конюшенная ул., 19">
+        <img src="img/content-img/map-popup.jpg" width="940" height="447" alt="Большая Конюшенная ул., 19">
       </a>
-      <button type="button" name="write-us-close">
+      <button type="button" name="btn-close">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
