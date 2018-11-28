@@ -10,6 +10,12 @@
         <a class="header-logo">
           <img src="img/content-img/main-logo.jpg" width="220" height="47" alt="Логотип магазина Техномарт">
         </a>
+        <form class="header-search">
+          <label>
+            <input type="search" name="search">
+            Поиск:
+          </label>
+        </form>
         <ul class="header-top-list">
           <li class="header-top-item">
             <a href="#">Закладки:
@@ -77,25 +83,25 @@
 
     <main class="container">
       <h2 class="visually-hidden">Главная страница интернет-магазина "Техномарт"</h2>
-      <section class="main-info">
-        <h3 class="main-info-title">Компания "Техномарт"</h3>
-        <p class="main-info info-desc">Настоящий мужской шопинг начинается здесь! Огромный выбор товаров
+      <section class="info">
+        <h3 class="info-title">Компания "Техномарт"</h3>
+        <p>Настоящий мужской шопинг начинается здесь! Огромный выбор товаров
           для ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах</p>
-        <p class="main-info info-delivery">Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
           Техномарт работает со многими транспортными компаниями</p>
-        <ul class="main-info delivery-list">
-            <li class="delivery-item">Деловые линии</li>
-            <li class="delivery-item">Автотрейдинг</li>
-            <li class="delivery-item">ЖелДорЭкспедиция</li>
+        <ul class="info-list">
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a class="main-info more-info" href="#">Подробнее о компании</a>
+        <a class="info-more" href="#">Подробнее о компании</a>
       </section>
 
-      <section class="main-contacts">
-        <h3 class="main-contacts-title">Контакты</h3>
-        <p class="main-contacts contacts-desc">Вы можете забрать товар сами, заехав в наш офис:</p>
+      <section class="contacts">
+        <h3 class="contacts-title">Контакты</h3>
+        <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         <img src="img/content-img/map-contacts.jpg" width="300" height="158" alt="Как нас найти">
-        <a class="main-contacts contacts-link" href="mailto:tehnomart@mail.ru">Заблудились? Напишите нам!</a>
+        <a class="contacts-link" href="mailto:tehnomart@mail.ru">Заблудились? Напишите нам!</a>
       </section>
     </main>
 
@@ -170,11 +176,18 @@
 
     <section class="modal modal-write-us">
       <form class="modal-letter" action="index.html" method="post">
-        <input type="text" id="user-name" name="name" placeholder="Имя Фамилия">
-        <label for="user-name">Ваше имя:</label>
-        <input type="email" id="user-email" name="email" placeholder="email@example.com">
-        <label for="user-email">Ваш e-mail:</label>
-        <textarea name="letter" id="user-letter" placeholder="В свободной форме">Текст письма:</textarea>
+        <label>
+          <input type="text" name="name" placeholder="Имя Фамилия">
+          Ваше имя:
+        </label>
+        <label>
+          <input type="email" name="email" placeholder="email@example.com">
+          Ваш e-mail:
+        </label>
+        <label>
+          <textarea name="letter" placeholder="В свободной форме"></textarea>
+          Текст письма:
+        </label>
         <button type="submit" name="btn-send">Отправить</button>
         <button type="button" name="btn-close">
           <span class="visually-hidden">Закрыть</span>
