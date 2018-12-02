@@ -2,13 +2,22 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Cuprum", "PT Sans", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
   color: #32425c;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/*Убираем подчеркивание у ссылок  */
 a {
   text-decoration: none;
 }
@@ -18,43 +27,120 @@ header {
   color: #ffffff;
 }
 
-.header-top,
-.header-nav {
-  font-size: 17px;
-  line-height: 17px;
-
-  background-color: #293449;
+/* Разметка логотипа */
+.header-logo .logo-hover,
+.header-logo .logo-active {
+  display: none;
 }
 
+.header-logo:hover .main-logo,
+.header-logo:hover .logo-active {
+  display: none;
+}
+
+.header-logo:hover .logo-hover {
+  display: inline-block;
+}
+
+.header-logo:active .logo-active {
+  display: inline-block;
+}
+
+.header-logo:active .main-logo,
+.header-logo:active .logo-hover {
+  display: none;
+}
+
+/* Убираем маркеры со списков */
 .header-top-list,
 .header-nav-list,
 .user-nav-list {
   list-style: none;
 }
 
-.header-top-list a,
-.header-nav-list a{
-  color: #ffffff
+/* Стили header-top */
+.header-top {
+  background-color: #293449;
 }
 
-.header-top-list a:hover,
-.header-top-list a:focus,
-.header-nav-list a:hover,
-.header-nav-list a:focus {
+.header-top-item a {
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.header-top-item a:hover,
+.header-top-item a:focus {
   background-color: #212a3a;
 }
 
-.user-nav-list a {
-  color: #000000;
-  font-size: 21px;
-  line-height: 21px;
-
-  background-color: #ffffff;
+.header-top-item a:active {
+  opacity: 0.6;
+  background-color: #161d29;
 }
 
-h1 {
+.header-top-order {
+  background-color: #63a63e;
+}
+
+.header-top-item .header-top-order:hover,
+.header-top-item .header-top-order:focus {
+  background-color: #5fbb2d;
+}
+
+.header-top-item .header-top-order:active {
+  opacity: 0.5;
+  background-color: #518534;
+}
+
+/* Стили для ссылок авторизованного пользователя */
+.header-top-item-autorized a {
+  width: 150px;
+  background-color: #ee3643;
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+/* Стили блока контактов в header */
+.header-contacts p {
+  color: #32425c;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.header-contacts {
+  width: 270px;
+  border: 3px solid #ffffff;
+}
+
+.header-contacts-link {
+  width: 144px;
+  color: #ee3643;
+  font-family: Cuprum;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.header-contacts-address {
+  width: 250px;
+  color: #32425c;
+  font-family: Cuprum;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.header-nav-list a:active {
+  opacity: 0.5;
+}
+
+/* Стили названия страницы */
+.page-title {
   width: 196px;
-  height: 60px;
 
   color: #ee3643;
   font-size: 16px;
@@ -62,16 +148,93 @@ h1 {
   line-height: 23px;
 }
 
-header p {
-  color: #32425c;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
+/* Стили кнопок Войти, Регистрация */
+.user-nav-item a {
+  color: #000000;
+  font-size: 21px;
+  line-height: 21px;
+
+  background-color: #ffffff;
 }
 
+.user-nav-item a:hover,
+.user-nav-item a:focus {
+  color: #ee3643;
+}
+
+.user-nav-item a:active {
+  opacity: 0.3;
+}
+
+
+
+/* Стили reg-nav в каталоге */
+.reg-nav-item {
+  width: 299px;
+}
+
+.reg-nav-item a {
+  color: #32425c;
+  font-family: Cuprum;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: underline;
+}
+
+.reg-nav-item a:hover,
+.reg-nav-item a:focus {
+  color: #ee3643;
+}
+
+.reg-nav-item a:active {
+  color: #32425c;
+  opacity: 0.3;
+}
+
+.reg-nav-item .profile-link {
+  color: #000000;
+  font-family: Cuprum;
+  font-size: 21px;
+  line-height: 21px;
+  text-decoration: none
+}
+
+.reg-nav-item .profile-link:hover,
+.reg-nav-item .profile-link:focus {
+  color: #000000;
+}
+
+.reg-nav-item .profile-link:active {
+  opacity: 0.3;
+}
+
+/* Стили навигации в header */
+.header-nav-list {
+  box-shadow: inset 0 -5px 0 #293449;
+  background-color: #32425c;
+}
+
+.header-nav-item a {
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 17px;
+  line-height: 17px;
+}
+
+.header-nav-item a:hover,
+.header-nav-item a:focus {
+  background-color: #1d2739;;
+}
+
+.header-nav-item a:active {
+  opacity: 0.5;
+}
+
+
+
+/*Стили для "О компании"  */
 .info {
   width: 519px;
-  height: 293px;
   color: #000000;
   font-family: "PT Sans";
   font-size: 13px;
@@ -100,6 +263,7 @@ header p {
   background-color: #ee3643;
 }
 
+/* Стили для контактов в main */
 .main-contacts p {
   color: #000000;
   font-family: "PT Sans";
@@ -120,18 +284,133 @@ header p {
   background-color: #ee3643;
 }
 
-footer {
+
+/* Стили для footer */
+.footer-main {
   color: #f3f7f9;
   font-size: 18px;
   line-height: 24px;
   background-color: #32425c;
 }
-footer a {
-  color: #f3f7f9;
+
+/* Стили для логотипа в footer */
+.footer-logo .logo-hover,
+.footer-logo .logo-active {
+  display: none;
 }
 
+.footer-logo:hover .main-logo,
+.footer-logo:hover .logo-active {
+  display: none;
+}
+
+.footer-logo:hover .logo-hover {
+  display: inline-block;
+}
+
+.footer-logo:active .logo-active {
+  display: inline-block;
+}
+
+.footer-logo:active .main-logo,
+.footer-logo:active .logo-hover {
+  display: none;
+}
+
+/* Убираем маркеры со списков */
 .footer-nav-list,
 .footer-menu-list,
 .social-list {
   list-style: none;
+}
+
+
+/* Стили для навигации в footer */
+.footer-nav-item a {
+  color: #f1f5f7;
+  font-family: Cuprum;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-nav-item a:hover,
+.footer-nav-item a:focus {
+  text-decoration: underline;
+}
+
+.footer-nav-item a:active {
+  opacity: 0.5;
+  text-decoration: none
+}
+
+/* Стили для контактов в footer */
+.footer-contacts {
+  width: 322px;
+  color: #f1f5f7;
+  font-family: Cuprum;
+  font-size: 18px;
+  line-height: 24px;
+}
+/* Белый цвет для ссылки-телефона */
+.footer-contacts a {
+  color: #f1f5f7;
+}
+
+/* Стили для меню в footer  */
+.footer-menu-item a {
+  color: #ffd180;
+  font-family: Cuprum;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-menu-item a:hover,
+.footer-menu-item a:focus {
+  text-decoration: underline;
+}
+
+.footer-menu-item a:active {
+  opacity: 0.5;
+  text-decoration: none
+}
+
+/* Стили для copyright */
+.copyright {
+  width: 227px;
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* Стили для social */
+
+
+/* Стили для feedback */
+/* Стили для develop */
+.feedback,
+.develop {
+  width: 135px;
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.feedback a,
+.develop a {
+  color: #ffd180;
+}
+
+.feedback a:hover,
+.feedback a:focus,
+.develop a:hover,
+.develop a:focus {
+  text-decoration: underline;
+}
+
+.feedback a:active,
+.develop a:active {
+  color: #ee3643;
+  text-decoration: none
 }
