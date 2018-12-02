@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header-main">
@@ -10,7 +13,7 @@
         <a href="index.html" class="header-logo">
           <img src="img/content-img/main-logo.jpg" width="220" height="47" alt="Логотипа магазина Техномарт">
         </a>
-        <form class="header-search">
+        <form action="https://echo.htmlacademy.ru" method="get" class="header-search">
           <input type="search" name="search" placeholder="Поиск">
         </form>
         <ul class="header-top-list">
@@ -100,7 +103,7 @@
           <a class="breadcrumbs-current">Перфораторы</a>
         </li>
       </ul>
-      <div class="main-catalog">
+      <section class="catalog">
         <ul class="catalog-list">
           <li class="catalog-item product">
             <div class="product-info">
@@ -297,11 +300,11 @@
             </div>
           </li>
         </ul>
-      </div>
+      </section>
 
-      <section class="main-filter">
+      <section class="filter">
         <h2 class="filter-title">Фильтр</h2>
-        <form class="filter" method="post" action="catalog.html">
+        <form class="filter" method="post" action="https://echo.htmlacademy.ru">
           <fieldset class="filter-price">
             <!--Здесь будет ползунок с ценой!-->
           </fieldset>
@@ -384,7 +387,7 @@
 
       <div class="footer-middle">
         <div class="footer-contacts">
-          <p>г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8<p>
+          <p>г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
           <a class="footer-contacts-link" href="tel:+78125550555">+7 (812) 555-05-55</a>
         </div>
         <div class="footer-menu">
