@@ -309,8 +309,13 @@ header {
 }
 
 .breadcrumbs-index {
-  background-image: url("../img/svg/icon-home.svg");
-  background-color: #c1c6ce;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/svg/icon-home.svg);
+  /* background-color: #c1c6ce; */
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .catalog-title {
@@ -363,7 +368,7 @@ header {
   text-transform: uppercase;
 }
 
-.cart-link, .bookmarks-button {
+.product-order {
   display: none;
 }
 
@@ -375,7 +380,7 @@ header {
   display: none;
 }
 
-.catalog-item.product:hover .cart-link, .bookmarks-button {
+.catalog-item.product:hover .product-order {
   display: inline-block;
 }
 
