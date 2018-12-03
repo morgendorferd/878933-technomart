@@ -50,7 +50,7 @@
             <a class="logout-link" href="#" aria-label="Выход"></a>
           </li>
           <li class="reg-nav-item">
-            <a class="cart-link" href="#">Мои заказы</a>
+            <a class="order-link" href="#">Мои заказы</a>
           </li>
           <li class="reg-nav-item">
             <a class="personal-link" href="#">Личный кабинет</a>
@@ -345,15 +345,21 @@
             </ul>
           </fieldset>
           <fieldset class="filter-supply">
-            <legend>Питание</legend>
-            <label>
-              <input type="radio" name="ПИТАНИЕ" value="АККУМУЛЯТОРНЫЕ" checked>
-              АККУМУЛЯТОРНЫЕ
-            </label>
-            <label>
-              <input type="radio" name="ПИТАНИЕ" value="СЕТЕВЫЕ">
-              СЕТЕВЫЕ
-            </label>
+            <legend class="legend-supply">Питание</legend>
+            <ul class="supply-list">
+              <li class="supply-item">
+                <label>
+                  <input type="radio" name="ПИТАНИЕ" value="АККУМУЛЯТОРНЫЕ" checked>
+                  АККУМУЛЯТОРНЫЕ
+                </label>
+              </li>
+              <li class="supply-item">
+                <label>
+                  <input type="radio" name="ПИТАНИЕ" value="СЕТЕВЫЕ">
+                  СЕТЕВЫЕ
+                </label>
+              </li>
+            </ul>
           </fieldset>
           <button type="submit">Показать</button>
         </form>
