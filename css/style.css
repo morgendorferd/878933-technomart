@@ -11,10 +11,13 @@ body {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 /*Убираем подчеркивание у ссылок  */
@@ -63,39 +66,43 @@ header {
   background-color: #293449;
 }
 
-.header-top-item a {
+.header-top-link {
   color: #ffffff;
   font-family: Cuprum;
   font-size: 17px;
   line-height: 18px;
 }
 
-.header-top-item a:hover,
-.header-top-item a:focus {
+.header-top-link:hover,
+.header-top-link:focus {
   background-color: #212a3a;
 }
 
-.header-top-item a:active {
+.header-top-link:active {
   opacity: 0.6;
   background-color: #161d29;
 }
 
 .header-top-order {
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 17px;
+  line-height: 18px;
   background-color: #63a63e;
 }
 
-.header-top-item .header-top-order:hover,
-.header-top-item .header-top-order:focus {
+.header-top-order:hover,
+.header-top-order:focus {
   background-color: #5fbb2d;
 }
 
-.header-top-item .header-top-order:active {
+.header-top-order:active {
   opacity: 0.5;
   background-color: #518534;
 }
 
 /* Стили для ссылок авторизованного пользователя */
-.header-top-item-autorized a {
+.header-top-link-autorized {
   width: 150px;
   background-color: #ee3643;
   color: #ffffff;
@@ -139,7 +146,7 @@ header {
 }
 
 /* Стили названия страницы */
-.page-title {
+.index-title {
   width: 196px;
 
   color: #ee3643;
@@ -169,6 +176,10 @@ header {
 
 
 /* Стили reg-nav в каталоге */
+.reg-nav-list {
+  list-style: none
+}
+
 .reg-nav-item {
   width: 299px;
 }
@@ -284,6 +295,23 @@ header {
   background-color: #ee3643;
 }
 
+/* Стили для main в каталоге */
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs-item {
+  color: #000000;
+  font-family: "PT Sans";
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.breadcrumbs-index {
+  background-image: url("img/svg/icon-home.svg");
+  background-color: #c1c6ce;
+}
 
 /* Стили для footer */
 .footer-main {
