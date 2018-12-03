@@ -309,11 +309,117 @@ header {
 }
 
 .breadcrumbs-index {
-  background-image: url("img/svg/icon-home.svg");
+  background-image: url("../img/svg/icon-home.svg");
   background-color: #c1c6ce;
 }
 
+.catalog-title {
+  color: #32425c;
+  font-family: Cuprum;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: #f2f6f8;
+}
+
+/* Стили карточки товара */
+.catalog-item.product {
+  list-style: none;
+}
+
+.catalog-item.product {
+  width: 220px;
+  height: 318px;
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+}
+
+.product-title {
+  width: 155px;
+  color: #000000;
+  font-family: "PT Sans";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.product-cart-link {
+  background-image: url("../img/svg/red-button.svg");
+  color: #ffffff;
+  font-family: "PT Sans";
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.product-old-price {
+  color: #999999;
+  font-family: "PT Sans";
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration: line-through;
+  text-transform: uppercase;
+}
+
+.cart-link, .bookmarks-button {
+  display: none;
+}
+
+.catalog-item.product:hover {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.catalog-item.product:hover .product-img-link {
+  display: none;
+}
+
+.catalog-item.product:hover .cart-link, .bookmarks-button {
+  display: inline-block;
+}
+
+.cart-link {
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  box-shadow: inset 0 -3px 0 #367315;
+  background-color: #63a63e;
+}
+
+.cart-link:hover {
+  box-shadow: inset 0 -3px 0 #367315;
+  background-color: #5fbb2d;
+}
+
+.cart-link:active {
+  background-color: #518534;
+}
+
+.bookmarks-button {
+  color: #32425c;
+  font-family: Cuprum;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 3px solid #63a63e;
+}
+
+.bookmarks-button:hover {
+  border: 3px solid #32425c;
+}
+
+.bookmarks-button:active {
+  opacity: 0.3;
+  border: 3px solid #32425c;
+}
+
 /* Стили для footer */
+
 .footer-main {
   color: #f3f7f9;
   font-size: 18px;
