@@ -80,6 +80,7 @@ header {
 }
 
 .login-link {
+  position: relative;
   margin-left: 69px;
   margin-right: 10px;
   padding: 14px 27px 15px;
@@ -89,6 +90,8 @@ header {
   content: "";
 
   position: absolute;
+  /* bottom: 1px;
+  left: -14px; */
   width: 20px;
   height: 17px;
 
@@ -188,6 +191,7 @@ header {
 }
 
 .header-contacts-link {
+  position: relative;
   width: 144px;
   margin-top: 46px;
   padding: 13px 52px 11px 74px;
@@ -553,11 +557,6 @@ header {
 
 /* Стили для footer */
 
-.wrapper {
-  display: flex;
-  margin: auto;
-}
-
 .footer-main {
   color: #f3f7f9;
   font-size: 18px;
@@ -609,6 +608,29 @@ header {
   list-style: none;
 }
 
+.social-list {
+  display: flex;
+}
+
+.social-item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #212a3a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:hover,
+.social-link:active {
+  background-color: #ee3643;
+}
 
 /* Стили для навигации в footer */
 
@@ -640,13 +662,13 @@ header {
 /* Стили для footer-middle */
 .footer-middle{
   display: flex;
+  padding: 5px 0 53px 0;
 }
 
 
 /* Стили для контактов в footer */
 .footer-contacts {
-  margin: 5px 0 53px 0;
-  width: 322px;
+  /* margin: 5px 0 53px 0; */
   color: #f1f5f7;
   font-family: Cuprum;
   font-size: 18px;
@@ -672,6 +694,7 @@ header {
 }
 
 .footer-menu-item a {
+  display: block;
   padding: 0 30px;
   color: #ffd180;
   font-family: Cuprum;
@@ -708,47 +731,6 @@ header {
   flex-wrap: nowrap;
 } */
 
-.social-vk::before {
-  content: "";
-
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-
-  background-image: url("../img/svg/icon-vk.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-color: #212a3a;
-}
-
-.social-fb::before {
-  content: "";
-
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-
-  background-image: url("../img/svg/icon-fb.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-color: #212a3a;
-}
-
-.social-ig::before {
-  content: "";
-
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-
-  background-image: url("../img/svg/icon-insta.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-color: #212a3a;
-}
 
 /* Стили для copyright */
 
