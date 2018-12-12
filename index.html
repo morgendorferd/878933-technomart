@@ -20,63 +20,66 @@
             <input type="search" name="search" placeholder="Поиск">
           </form>
           <ul class="header-top-list">
-            <li>
-              <a class="header-top-link" href="#">Закладки:
+            <li class="header-top-item">
+              <a class="header-top-bookmarks" href="#">Закладки:
                 <span class="bookmarks-counter">0</span>
               </a>
             </li>
-            <li>
-              <a class="header-top-link" href="#">Корзина:
+            <li class="header-top-item">
+              <a class="header-top-cart" href="#">Корзина:
                 <span class="cart-counter">0</span>
               </a>
             </li>
-            <li>
+            <li class="header-top-item">
               <a class="header-top-order" href="#">Оформить заказ</a>
             </li>
           </ul>
         </div>
       </div>
 
-      <div class="header-middle container">
-        <h1 class="index-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-        <div class="header-contacts">
-          <a class="header-contacts-link" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <p>г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
+      <div class="header-middle">
+        <div class="container header-middle-wrapper">
+          <h1 class="index-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+          <div class="header-contacts">
+            <a class="header-contacts-link" href="tel:+78125550555">+7 (812) 555-05-55</a>
+            <p>г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
+          </div>
+          <ul class="user-nav-list">
+            <li class="user-nav-item">
+              <a class="login-link" href="#">Войти</a>
+            </li>
+            <li class="user-nav-item">
+              <a class="registration-link" href="#">Регистация</a>
+            </li>
+          </ul>
         </div>
-        <ul class="user-nav-list">
-          <li class="user-nav-item">
-            <a class="login-link" href="#">Войти</a>
-          </li>
-          <li class="user-nav-item">
-            <a class="registration-link" href="#">Регистация</a>
-          </li>
-        </ul>
       </div>
 
       <div class="header-bottom container">
         <ul class="header-nav-list">
           <li class="header-nav-item">
-            <a>Главная</a>
+            <a class="header-nav-link">Главная</a>
           </li>
           <li class="header-nav-item">
-            <a href="#">Компания</a>
+            <a class="header-nav-link" href="#">Компания</a>
           </li>
           <li class="header-nav-item">
-            <a href="catalog.html">Каталог</a>
+            <a class="header-nav-link" href="catalog.html">Каталог</a>
           </li>
           <li class="header-nav-item">
-            <a href="#">Новости</a>
+            <a class="header-nav-link" href="#">Новости</a>
           </li>
           <li class="header-nav-item">
-            <a href="#">Спецпредложения</a>
+            <a class="header-nav-link" href="#">Спецпредложения</a>
           </li>
           <li class="header-nav-item">
-            <a href="#">Доставка</a>
+            <a class="header-nav-link" href="#">Доставка</a>
           </li>
           <li class="header-nav-item">
-            <a href="#">Контакты</a>
+            <a class="header-nav-link" href="#">Контакты</a>
           </li>
         </ul>
+      </div>
       </div>
     </header>
 
@@ -108,9 +111,9 @@
     <footer class="footer-main">
       <div class="footer-top container">
         <a class="footer-logo">
-          <img class="main-logo" src="img/content-img/main-logo.jpg" width="220" height="47" alt="Логотип магазина Техномарт">
-          <img class="logo-hover" src="img/content-img/logo-hover.jpg" width="220" height="47" alt="Логотип магазина Техномарт наведение">
-          <img class="logo-active" src="img/content-img/logo-active.jpg" width="220" height="47" alt="Логотип магазина Техномарт клик">
+          <img class="logo-footer" src="img/content-img/logo-footer.jpg" width="220" height="68" alt="Логотип магазина Техномарт">
+          <!-- <img class="logo-hover" src="img/content-img/logo-hover.jpg" width="220" height="47" alt="Логотип магазина Техномарт наведение">
+          <img class="logo-active" src="img/content-img/logo-active.jpg" width="220" height="47" alt="Логотип магазина Техномарт клик"> -->
         </a>
 
           <ul class="footer-nav-list">
@@ -157,7 +160,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div class="container">
+        <div class="footer-bottom-wrapper container">
           <div class="copyright">
             <p>© 2010–2017 Компания «Техномарт»<br>
                Все права защищены</p>
@@ -193,6 +196,7 @@
             <a class="develop-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
           </div>
         </div>
+
       </div>
     </footer>
 
