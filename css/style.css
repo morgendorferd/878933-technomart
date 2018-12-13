@@ -90,10 +90,10 @@ a {
 
 /* Форма поиска */
 
-.header-search input {
+.header-search {
   box-sizing: border-box;
   width: 270px;
-  padding: 12px 10px 12px 49px;
+  /* padding: 12px 10px 12px 49px; */
 
   color: #ffffff;
   font-family: Cuprum;
@@ -104,13 +104,18 @@ a {
   border: none;
 }
 
-.header-search input:hover {
+.header-search:hover {
   background-color: #212a3a;
 }
 
-.header-search input:focus {
+.header-search:focus {
   color: #000000;
   background-color: #ffffff;
+}
+
+.icon-search {
+  fill: #ffffff;
+  opacity: 0.3;
 }
 
 .header-top-list {
@@ -911,4 +916,68 @@ a {
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
+}
+
+
+
+/* Стили каталога */
+
+.catalog {
+
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 700px;
+  margin: 20px auto;
+  padding: 0;
+}
+
+.catalog-item.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width:218px;
+  min-height: 318px;
+  margin-bottom:20px;
+  border:1px solid #ccc;
+  line-height:20px;
+  font-weight:bold;
+  text-align:center;
+}
+
+.product-img {
+  order: 1;
+}
+
+.product-title {
+  order: 2;
+}
+
+.product-old-price {
+  order: 3;
+}
+
+.product-cart-link {
+  order: 4;
+}
+
+.product-new {
+  position: absolute;
+  width: 60px;
+  height: 59px;
+  top: -1px;
+  left: 159px;
+  background:url("../img/content-img/new_flag.jpg") no-repeat 0 0;
+}
+
+.new-item {
+  opacity: 0;
+}
+
+.product-img-link {
+  top: -29px;
+  left: 40px;
 }
