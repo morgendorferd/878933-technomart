@@ -11,10 +11,20 @@ body {
   color: #32425c;
 }
 
+/* *,
+*::before,
+*::after {
+box-sizing: inherit;
+} */
+
 a {
   display: inline-block;
   text-decoration: none;
+  cursor: pointer;
+}
 
+button {
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -190,7 +200,7 @@ display: none;
 
 .header-top-bookmarks {
   position: relative;
-  padding: 13px 30px 14px 44px;
+  padding: 13px 25px 14px 44px;
 }
 
 .header-top-bookmarks::before {
@@ -226,14 +236,29 @@ display: none;
   background-position: 0 0;
 }
 
-/* Стили для ссылок авторизованного пользователя */
-.header-top-link-autorized {
+.header-top-cart-autorized {
+  position: relative;
   width: 150px;
+  padding: 13px 30px 14px 44px;
   background-color: #ee3643;
   color: #ffffff;
   font-family: Cuprum;
   font-size: 17px;
   line-height: 18px;
+}
+
+.header-top-cart-autorized::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 11px;
+
+  width: 14px;
+  height: 16px;
+
+  background-image: url("../img/svg/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 /* Стили header-middle */
@@ -374,7 +399,9 @@ display: none;
 
 /* Стили reg-nav в каталоге */
 .reg-nav-list {
-  list-style: none
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .reg-nav-item {
@@ -400,11 +427,32 @@ display: none;
 }
 
 .reg-nav-item .profile-link {
+  position: relative;
+  box-sizing: border-box;
+  min-width: 299px;
+  padding: 12px 66px 12px 47px;
+
+  background-color: #ffffff;
   color: #000000;
   font-family: Cuprum;
   font-size: 21px;
   line-height: 21px;
   text-decoration: none
+}
+
+.profile-link::before {
+  content: "";
+
+  width: 20px;
+  height: 18px;
+
+  top: 11px;
+  left: 13px;
+
+  background-image: url("../img/svg/icon-user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
 }
 
 .reg-nav-item .profile-link:hover,
@@ -766,16 +814,43 @@ display: none;
 .breadcrumbs {
   order: 1;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   list-style: none;
+  padding: 0;
 }
 
-.breadcrumbs-item {
+.breadcrumbs li {
+  position: relative;
+  margin-right: 40px;
   color: #000000;
   font-family: "PT Sans";
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+.breadcrumbs li::after {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  right: -20px;
+
+  width: 8px;
+  height: 12px;
+
+  background-image: url("../img/svg/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs-current:after {
+  display: none;
 }
 
 /* .breadcrumbs-index {
@@ -1028,8 +1103,11 @@ display: none;
   width: 220px;
 }
 
-/* Стили для фильтров */
 .filter-title {
+  box-sizing: border-box;
+  width: 220px;
+  padding: 14px 149px 15px 18px;
+  margin-bottom: 220px;
   color: #000000;
   font-family: "PT Sans";
   font-size: 13px;
@@ -1040,10 +1118,13 @@ display: none;
 }
 
 .filter fieldset {
+  padding: 0;
+  margin: 0;
   border: none;
 }
 
 .filter legend {
+  margin-bottom: 13px;
   color: #000000;
   font-family: "PT Sans";
   font-size: 17px;
@@ -1052,16 +1133,25 @@ display: none;
   text-transform: uppercase;
 }
 
+.filter-companies {
+  margin-bottom: 54px;
+}
+
 .legend-supply {
   letter-spacing: 0.05px;
 }
 
 .companies-list, .supply-list {
+  margin: 0 auto;
+  padding: 0;
   list-style: none;
 }
 
 .companies-item,
 .supply-item {
+  margin-bottom: 20px;
+  padding-left: 17px;
+
   color: #000000;
   font-family: "PT Sans";
   font-size: 15px;
@@ -1075,12 +1165,96 @@ display: none;
   opacity: 0.4;
 }
 
+.filter label {
+  display: block;
+
+  margin-left: 16px;
+  position: relative;
+  cursor: pointer;
+
+}
+
 .filter button {
   color: #000000;
   font-family: "PT Sans";
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
+}
+
+input[type="checkbox"] + .checkbox-indicator::before {
+  content: "";
+
+  position: absolute;
+  top: -1px;
+  left: -33px;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/svg/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+
+  position: absolute;
+  top: -1px;
+  left: -33px;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/svg/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+input[type="radio"] + .radio-indicator::before {
+  content: "";
+
+  position: absolute;
+  top: -2px;
+  left: -34px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/svg/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+input[type="radio"]:checked + .radio-indicator::after {
+  content: "";
+
+  position: absolute;
+  top: -2px;
+  left: -34px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/svg/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-show {
+  width: 140px;
+  margin-top: 60px;
+  padding: 10px 39px 10px 39px;
+
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "PT Sans";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 
 .modal {
