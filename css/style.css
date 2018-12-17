@@ -101,9 +101,9 @@ button {
 /* Форма поиска */
 
 .header-search {
+  display: flex;
   box-sizing: border-box;
   width: 270px;
-  /* padding: 12px 10px 12px 49px; */
 
   color: #ffffff;
   font-family: Cuprum;
@@ -116,33 +116,66 @@ button {
 
 .button-search {
   height: 100%;
-  /* min-width: 50px; */
+  height: 100%;
+  padding-left: 13px;
+  padding-top: 5px;
+  border: none;
+  background-color: #293449;
+  opacity: 0.3;
 }
 
-.header-search input {
+.header-search-input {
   height: 100%;
-  /* min-width: 220px; */
-  background-color: #212a3a;
+  width: 100%;
+  padding-left: 9px;
+
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
+  background-color: #293449;
   border: none;
 }
 
-input[type="search"]::-webkit-search-cancel-button {
-display: none;
+/* .header-search:hover,
+.header-search:focus {
+  background-color: #212a3a;
+} */
+
+.header-search-input:hover,
+ .header-search-input:focus {
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
-.header-search:hover {
+/* .header-search:hover,
+.header-search:focus {
+  color: #000000;
   background-color: #212a3a;
 }
 
-.header-search:focus {
-  color: #000000;
+.header-search:active {
   background-color: #ffffff;
+  color: #000000;
+  font-family: Cuprum;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 .icon-search {
+  background-color: #293449;
   fill: #ffffff;
   opacity: 0.3;
 }
+
+.icon-search:hover {
+
+} */
 
 .header-top-list {
   list-style: none;
@@ -279,6 +312,7 @@ display: none;
   width: 196px;
   margin: 0;
   padding-left: 53px;
+  padding-right: 18px;
   padding-top: 8px;
 
   color: #ee3643;
@@ -1122,7 +1156,8 @@ display: none;
   box-sizing: border-box;
   width: 220px;
   padding: 14px 149px 15px 18px;
-  margin-bottom: 220px;
+  margin-bottom: 20px;
+  margin-top: 0;
   color: #000000;
   font-family: "PT Sans";
   font-size: 13px;
@@ -1146,6 +1181,108 @@ display: none;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.filter-price {
+  width: 220px;
+  margin-bottom: 42px;
+  position: relative;
+
+  color: #000000;
+  font-family: "PT Sans";
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter-price::after {
+  content: "";
+
+  position:absolute;
+  bottom: -24px;
+  left: 0;
+
+  width: 220px;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+.range-controls {
+  box-sizing: border-box;
+  width: 220px;
+  padding: 39px 20px;
+  margin-bottom: 9px;
+  background-color: #f7f3ec;
+
+}
+
+.scale {
+  position: absolute;
+  width: 180px;
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.bar {
+  width: 152px;
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.range-toggle {
+  position: relative;
+  top: -22px;
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 100px;
+}
+
+.price-controls {
+  position: relative;
+  display: flex;
+  width: 220px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.price-controls::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 106px;
+  width: 10px;
+  height: 1px;
+  background-colors: #444444;
+}
+
+.price-controls input {
+  width: 95px;
+  height: 38px;
+
+  color: #000000;
+  font-family: "PT Sans";
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #f7f3ec;
+  border: none;
 }
 
 .filter-companies {
@@ -1180,7 +1317,7 @@ display: none;
   opacity: 0.4;
 }
 
-.filter label {
+fieldset label {
   display: block;
 
   margin-left: 16px;
@@ -1189,7 +1326,7 @@ display: none;
 
 }
 
-.filter button {
+.filter-show {
   color: #000000;
   font-family: "PT Sans";
   font-size: 13px;
