@@ -51,7 +51,7 @@ button {
 
 
 .header-main {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   background-color: #f4f7f9;
   color: #ffffff;
 }
@@ -404,10 +404,6 @@ display: none;
   padding: 0;
 }
 
-.reg-nav-item {
-  width: 299px;
-}
-
 .reg-nav-item a {
   color: #32425c;
   font-family: Cuprum;
@@ -462,6 +458,27 @@ display: none;
 
 .reg-nav-item .profile-link:active {
   opacity: 0.3;
+}
+
+.order-link {
+  margin-left: 20px;
+  position: relative;
+}
+
+.order-link::after {
+  content: "";
+
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #32425c;
+  position: absolute;
+  top: 8px;
+  right: -18px;
+}
+
+.personal-link {
+  margin-left: 30px;
 }
 
 /* Стили навигации в header */
@@ -812,7 +829,6 @@ display: none;
 /* Стили breadcrumbs */
 
 .breadcrumbs {
-  order: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -864,7 +880,7 @@ display: none;
 
 /* Стили заголовка */
 .catalog-title {
-  order: 2;
+  padding: 32px 740px 32px 28px;
   color: #32425c;
   font-family: Cuprum;
   font-size: 30px;
@@ -872,7 +888,6 @@ display: none;
   text-transform: uppercase;
   background-color: #f2f6f8;
 }
-
 
 /* Стили каталога */
 
