@@ -190,17 +190,23 @@ button {
 .header-top-bookmarks:hover,
 .header-top-bookmarks:focus,
 .header-top-cart:hover,
-.header-top-cart:focus,
-.header-top-cart-autorized:hover,
-.header-top-cart-autorized:focus {
+.header-top-cart:focus {
   background-color: #212a3a;
 }
 
 .header-top-bookmarks:active,
-.header-top-cart:active,
-.header-top-cart-autorized:active {
+.header-top-cart:active {
   opacity: 0.6;
   background-color: #161d29;
+}
+
+.header-top-cart-autorized:hover,
+.header-top-cart-autorized:focus {
+
+}
+
+.header-top-cart-autorized:active {
+  opacity: 0.6;
 }
 
 .header-top-order {
@@ -244,6 +250,15 @@ button {
   background-image: url("../img/svg/icon-bookmark.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.3;
+}
+
+.header-top-bookmarks:hover::before {
+  opacity: 1.0;
+}
+
+.header-top-bookmarks:active::before {
+  opacity: 0.5;
 }
 
 .header-top-cart {
@@ -263,6 +278,15 @@ button {
   background-image: url("../img/svg/icon-cart.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.3;
+}
+
+.header-top-cart:hover::before {
+  opacity: 1.0;
+}
+
+.header-top-cart:active::before {
+  opacity: 0.5;
 }
 
 .header-top-cart-autorized {
@@ -288,8 +312,16 @@ button {
   background-image: url("../img/svg/icon-cart.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.3;
 }
 
+.header-top-cart-autorized:hover::before {
+  opacity: 1.0;
+}
+
+.header-top-cart-autorized:active::before {
+  opacity: 0.5;
+}
 /* Стили header-middle */
 .header-middle {
   background-color: #f3f7f9;
@@ -385,6 +417,7 @@ button {
 }
 
 .user-nav-item a:active {
+  color: #000000;
   opacity: 0.3;
 }
 
@@ -431,7 +464,8 @@ button {
   padding: 0;
 }
 
-.reg-nav-item a {
+.order-link,
+.personal-link {
   color: #32425c;
   font-family: Cuprum;
   font-size: 16px;
@@ -439,20 +473,22 @@ button {
   text-decoration: underline;
 }
 
-.reg-nav-item a:hover,
-.reg-nav-item a:focus {
+.order-link:hover,
+.order-link:focus,
+.personal-link:hover,
+.personal-link:focus {
   color: #ee3643;
 }
 
-.reg-nav-item a:active {
+.order-link:active,
+.personal-link:active {
   color: #32425c;
   opacity: 0.3;
 }
 
-.reg-nav-item .profile-link {
+ .profile-link {
   box-sizing: border-box;
-  min-width: 299px;
-  padding: 10px 66px 9px 13px;
+  padding: 10px 13px 9px 13px;
 
   background-color: #ffffff;
   color: #000000;
@@ -462,12 +498,17 @@ button {
   text-decoration: none
 }
 
-.reg-nav-item .profile-link svg {
+.profile-link svg {
   margin-right: 10px;
 }
 
-.reg-nav-item .profile-link:active {
+.profile-link:active {
+  color: #000000;
   opacity: 0.3;
+}
+
+.profile-link:hover {
+  color: #ee3643;
 }
 
 .reg-nav-item {
@@ -475,9 +516,11 @@ button {
 }
 
 .profile-exit {
-    position: absolute;
-    top: 13px;
-    right: 8px;
+  padding-top: 13px;
+  padding-left: 22px;
+  padding-bottom: 3px;
+  padding-right: 10px;
+  background-color: #ffffff;
 }
 
 .profile-exit svg:hover path,
@@ -490,15 +533,6 @@ button {
 .profile-exit svg:active path,
 .profile-link svg:active path {
   fill: #c5c5c5;
-}
-
-.reg-nav-item .profile-link:hover,
-.reg-nav-item .profile-link:focus {
-  color: #000000;
-}
-
-.reg-nav-item .profile-link:active {
-  opacity: 0.3;
 }
 
 .order-link {
