@@ -138,27 +138,17 @@ button {
   border: none;
 }
 
-/* .header-search:hover,
-.header-search:focus {
-  background-color: #212a3a;
-} */
+.button-search:hover,
+.button-search:focus {
+  color: #212a3a;
+}
 
 .header-search-input:hover,
- .header-search-input:focus {
-  color: #ffffff;
-  font-family: Cuprum;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 18px;
-}
-
-/* .header-search:hover,
-.header-search:focus {
-  color: #000000;
+.header-search-input:focus {
   background-color: #212a3a;
 }
 
-.header-search:active {
+.header-search-inpu:active {
   background-color: #ffffff;
   color: #000000;
   font-family: Cuprum;
@@ -172,10 +162,6 @@ button {
   fill: #ffffff;
   opacity: 0.3;
 }
-
-.icon-search:hover {
-
-} */
 
 .header-top-list {
   list-style: none;
@@ -197,12 +183,15 @@ button {
 .header-top-bookmarks:hover,
 .header-top-bookmarks:focus,
 .header-top-cart:hover,
-.header-top-cart:focus{
+.header-top-cart:focus,
+.header-top-cart-autorized:hover,
+.header-top-cart-autorized:focus {
   background-color: #212a3a;
 }
 
 .header-top-bookmarks:active,
-.header-top-cart:active {
+.header-top-cart:active,
+.header-top-cart-autorized:active {
   opacity: 0.6;
   background-color: #161d29;
 }
@@ -309,13 +298,13 @@ button {
 
 /* Стили названия страницы */
 .index-title {
-  width: 196px;
+  width: 197px;
   margin: 0;
   padding-left: 53px;
-  padding-right: 18px;
-  padding-top: 8px;
+  padding-top: 3px;
 
   color: #ee3643;
+  font-family: Cuprum;
   font-size: 16px;
   font-style: italic;
   line-height: 23px;
@@ -325,7 +314,7 @@ button {
 .header-contacts p {
   width: 250px;
   margin: 0;
-  padding: 10px;
+  padding: 7px;
 
   color: #32425c;
   font-family: Cuprum;
@@ -338,10 +327,11 @@ button {
   box-sizing: border-box;
   position: relative;
   width: 270px;
-  padding: 10px 42px 7px 71px;
-  color: #ee3643;
+  padding: 10px 47px 7px 71px;
+  color: #e9292a;
   font-family: Cuprum;
   font-size: 21px;
+  font-weight: 400;
   line-height: 21px;
   text-align: center;
   border: 3px solid #ffffff;
@@ -370,9 +360,9 @@ button {
   padding: 0;
 }
 
-.user-nav-item {
+/* .user-nav-item {
   position: relative;
-}
+} */
 
 .user-nav-item a {
   color: #000000;
@@ -400,34 +390,22 @@ button {
   margin-right: 10px;
 }
 
-.login-icon {
+.login-link svg {
   content: "";
   width: 20px;
   height: 17px;
 
   position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-/* .login-link::before {
-  content: "";
-
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 16px;
   left: 14px;
-
-  width: 20px;
-  height: 17px;
-
-  background-image: url("../img/svg/icon-login.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-} */
+}
 
 .login-link:hover {
   color: #ee3643;
+}
+
+.login-link svg:hover path {
+  fill: #32425c;
 }
 
 .registration-link {
@@ -467,7 +445,7 @@ button {
 .reg-nav-item .profile-link {
   box-sizing: border-box;
   min-width: 299px;
-  padding: 12px 66px 12px 47px;
+  padding: 10px 66px 9px 13px;
 
   background-color: #ffffff;
   color: #000000;
@@ -477,19 +455,12 @@ button {
   text-decoration: none
 }
 
-.reg-nav-item .profile-link:active {
-  opacity: 0.3;s
+.reg-nav-item .profile-link svg {
+  margin-right: 10px;
 }
 
-.profile-icon {
-  content: "";
-
-  position: absolute;
-  top: 13px;
-  left: 13px;
-
-  width: 20px;
-  height: 18px;
+.reg-nav-item .profile-link:active {
+  opacity: 0.3;
 }
 
 .reg-nav-item {
@@ -497,25 +468,20 @@ button {
 }
 
 .profile-exit {
-  content: "";
-
-  position: absolute;
-  top: 14px;
-  right: 10px;
-
-  width: 20px;
-  height: 17px;
+    position: absolute;
+    top: 13px;
+    right: 8px;
 }
 
 .profile-exit svg:hover path,
 .profile-exit svg:focus path,
-.profile-icon svg:hover path,
-.profile-icon svg:focus path {
+.profile-link svg:hover path,
+.profile-link svg:focus path {
   fill: #32425c;
 }
 
 .profile-exit svg:active path,
-.profile-icon svg:active path {
+.profile-link svg:active path {
   fill: #c5c5c5;
 }
 
