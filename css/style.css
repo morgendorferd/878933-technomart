@@ -130,32 +130,39 @@ button {
   padding-left: 9px;
 
   color: #ffffff;
-  font-family: Cuprum;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 18px;
   background-color: #293449;
   border: none;
 }
 
-.button-search:hover,
-.button-search:focus {
-  color: #212a3a;
+.header-search:hover input[type="search"] {
+  background-color: #212a3a;
+  color: #ffffff;
 }
 
-.header-search-input:hover,
+.header-search:hover .button-search {
+  background-color: #212a3a;
+  fill: #ffffff;
+  opacity: 1.0;
+}
+
+.header-search:active input[type="search"] {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+}
+/* .header-search-input:hover,
 .header-search-input:focus {
   background-color: #212a3a;
 }
 
-.header-search-inpu:active {
+.header-search-input:active {
   background-color: #ffffff;
   color: #000000;
   font-family: Cuprum;
   font-size: 17px;
   font-weight: 400;
   line-height: 18px;
-}
+} */
 
 .icon-search {
   background-color: #293449;
