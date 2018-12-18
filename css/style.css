@@ -370,6 +370,10 @@ button {
   padding: 0;
 }
 
+.user-nav-item {
+  position: relative;
+}
+
 .user-nav-item a {
   color: #000000;
   font-size: 21px;
@@ -396,7 +400,17 @@ button {
   margin-right: 10px;
 }
 
-.login-link::before {
+.login-icon {
+  content: "";
+  width: 20px;
+  height: 17px;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+/* .login-link::before {
   content: "";
 
   position: absolute;
@@ -410,17 +424,11 @@ button {
   background-image: url("../img/svg/icon-login.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-}
+} */
 
 .login-link:hover {
   color: #ee3643;
 }
-
-/* .login-link::before:hover {
-  background-image: url("../img/svg/icon-login-hover.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-} */
 
 .registration-link {
   box-sizing: border-box;
@@ -457,7 +465,6 @@ button {
 }
 
 .reg-nav-item .profile-link {
-  position: relative;
   box-sizing: border-box;
   min-width: 299px;
   padding: 12px 66px 12px 47px;
@@ -470,19 +477,46 @@ button {
   text-decoration: none
 }
 
-.profile-link::before {
+.reg-nav-item .profile-link:active {
+  opacity: 0.3;s
+}
+
+.profile-icon {
   content: "";
+
+  position: absolute;
+  top: 13px;
+  left: 13px;
 
   width: 20px;
   height: 18px;
+}
 
-  top: 11px;
-  left: 13px;
+.reg-nav-item {
+  position: relative;
+}
 
-  background-image: url("../img/svg/icon-user.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+.profile-exit {
+  content: "";
+
   position: absolute;
+  top: 14px;
+  right: 10px;
+
+  width: 20px;
+  height: 17px;
+}
+
+.profile-exit svg:hover path,
+.profile-exit svg:focus path,
+.profile-icon svg:hover path,
+.profile-icon svg:focus path {
+  fill: #32425c;
+}
+
+.profile-exit svg:active path,
+.profile-icon svg:active path {
+  fill: #c5c5c5;
 }
 
 .reg-nav-item .profile-link:hover,
@@ -806,6 +840,7 @@ button {
 }
 
 .social-link:hover,
+.social-link:focus,
 .social-link:active {
   background-color: #ee3643;
 }
@@ -914,7 +949,9 @@ button {
 
 /* Стили заголовка */
 .catalog-title {
-  padding: 32px 740px 32px 28px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 28px;
   color: #32425c;
   font-family: Cuprum;
   font-size: 30px;
@@ -1059,7 +1096,8 @@ button {
   text-transform: uppercase;
 }
 
-.catalog-item.product:hover {
+.catalog-item.product:hover,
+.catalog-item.product:focus {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
@@ -1129,7 +1167,8 @@ button {
   opacity: 0.3;
 }
 
-.cart-link:hover {
+.cart-link:hover,
+.cart-link:focus {
   box-shadow: inset 0 -3px 0 #367315;
   background-color: #5fbb2d;
 }
@@ -1138,7 +1177,8 @@ button {
   background-color: #518534;
 }
 
-.bookmarks-button:hover {
+.bookmarks-button:hover,
+.bookmarks-button:focus {
   border: 3px solid #32425c;
 }
 
@@ -1235,8 +1275,9 @@ button {
   top: -22px;
   width: 4px;
   height: 4px;
+  padding: 2px;
 
-  background: #ababab;
+  background-color: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
@@ -1248,7 +1289,7 @@ button {
 }
 
 .range-toggle-max {
-  left: 100px;
+  left: 116px;
 }
 
 .price-controls {
