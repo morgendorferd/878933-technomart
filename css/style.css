@@ -1446,5 +1446,129 @@ input[type="radio"]:checked + .radio-indicator::after {
 }
 
 .modal {
-  display: none;
+  position: fixed;
+}
+
+.modal-write-us {
+  width: 620px;
+  min-height: 430px;
+
+  top: 200px;
+  left: 620px;
+
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+}
+
+.modal-write-us:before {
+  content: "";
+
+  width: 620px;
+  height: 7px;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  background-color: #ff5257;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 9px;
+
+  width: 22px;
+  height: 22px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 0;
+
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #ee3643;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-letter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 55px;
+  padding: 0;
+
+  color: #000000;
+  font-family: Cuprum;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.modal-letter label {
+  display: flex;
+  flex-direction: column-reverse;
+
+}
+
+.modal-letter input {
+  box-sizing: border-box;
+  width: 220px;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 22px;
+
+  color: #a9a9a9;
+  font-family: "PT Sans";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.modal-letter textarea {
+  box-sizing: border-box;
+  width: 460px;
+  min-height: 114px;
+  padding-left: 14px;
+  padding-top: 11px;
+  margin-bottom: 37px;
+
+  color: #a9a9a9;
+  font-family: "PT Sans";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.modal-send {
+  padding: 14px 198px;
+
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  border: none;
+  border-radius: 3px;
 }
