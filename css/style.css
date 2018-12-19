@@ -187,28 +187,6 @@ button {
   line-height: 18px;
 }
 
-.header-top-bookmarks:hover,
-.header-top-bookmarks:focus,
-.header-top-cart:hover,
-.header-top-cart:focus {
-  background-color: #212a3a;
-}
-
-.header-top-bookmarks:active,
-.header-top-cart:active {
-  opacity: 0.6;
-  background-color: #161d29;
-}
-
-.header-top-cart-autorized:hover,
-.header-top-cart-autorized:focus {
-
-}
-
-.header-top-cart-autorized:active {
-  opacity: 0.6;
-}
-
 .header-top-order {
   width: 150px;
   margin: 0;
@@ -253,7 +231,8 @@ button {
   opacity: 0.3;
 }
 
-.header-top-bookmarks:hover::before {
+.header-top-bookmarks:hover::before,
+ .header-top-bookmarks:focus::before{
   opacity: 1.0;
 }
 
@@ -281,7 +260,8 @@ button {
   opacity: 0.3;
 }
 
-.header-top-cart:hover::before {
+.header-top-cart:hover::before,
+ .header-top-cart:focus::before {
   opacity: 1.0;
 }
 
@@ -315,7 +295,8 @@ button {
   opacity: 0.3;
 }
 
-.header-top-cart-autorized:hover::before {
+.header-top-cart-autorized:hover::before,
+.header-top-cart-autorized:focus::before {
   opacity: 1.0;
 }
 
@@ -440,11 +421,13 @@ button {
   left: 14px;
 }
 
-.login-link:hover {
+.login-link:hover,
+.login-link:focus {
   color: #ee3643;
 }
 
-.login-link svg:hover path {
+.login-link:hover path,
+.login-link:focus path {
   fill: #32425c;
 }
 
@@ -507,10 +490,15 @@ button {
   opacity: 0.3;
 }
 
-.profile-link:hover {
+.profile-link:hover,
+.profile-link:focus {
   color: #ee3643;
 }
 
+.profile-link:hover path,
+.profile-link:focus path {
+  fill: #32425c;
+}
 .reg-nav-item {
   position: relative;
 }
@@ -523,15 +511,12 @@ button {
   background-color: #ffffff;
 }
 
-.profile-exit svg:hover path,
-.profile-exit svg:focus path,
-.profile-link svg:hover path,
-.profile-link svg:focus path {
+.profile-exit:hover path,
+.profile-exit:focus path {
   fill: #32425c;
 }
 
-.profile-exit svg:active path,
-.profile-link svg:active path {
+.profile-exit svg:active path {
   fill: #c5c5c5;
 }
 
