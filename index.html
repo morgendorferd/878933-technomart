@@ -110,8 +110,10 @@
         <section class="main-contacts">
           <h3 class="main-contacts-title">Контакты</h3>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-          <img src="img/content-img/map-contacts.jpg" width="300" height="158" alt="Как нас найти">
-          <a class="main-contacts-link" href="mailto:tehnomart@mail.ru">Заблудились? Напишите нам!</a>
+          <a class="contacts-map"  href="#">
+            <img src="img/content-img/map-contacts.jpg" width="300" height="158" alt="Как нас найти">
+          </a>
+          <a class="main-contacts-link">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
@@ -120,8 +122,6 @@
       <div class="footer-top container">
         <a class="footer-logo">
           <img class="logo-footer" src="img/content-img/logo-footer.jpg" width="220" height="68" alt="Логотип магазина Техномарт">
-          <!-- <img class="logo-hover" src="img/content-img/logo-hover.jpg" width="220" height="47" alt="Логотип магазина Техномарт наведение">
-          <img class="logo-active" src="img/content-img/logo-active.jpg" width="220" height="47" alt="Логотип магазина Техномарт клик"> -->
         </a>
 
           <ul class="footer-nav-list">
@@ -232,13 +232,100 @@
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.299551772968!2d30.321988958267!3d59.93879419546905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1545302602049" width="940" height="447" frameborder="0" style="border:0" allowfullscreen></iframe>
       <a href="https://www.google.ru/maps?hl=ru">
         <img src="img/content-img/map-popup.jpg" width="940" height="447" alt="Большая Конюшенная ул., 19">
       </a>
-      <button type="button" name="btn-close">
+      <button class="modal-map-close" type="button" name="btn-close">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
 
+  <script>
+    var link = document.querySelector(".main-contacts-link");
+
+    var popup = document.querySelector(".modal-write-us");
+
+    var close = popup.querySelector(".modal-close");
+
+    var form = popup.querySelector("form");
+
+    var name = popup.querySelector("[name=name]");
+
+    var email = popup.querySelector("[name=email]");
+
+    var letter = popup.querySelector("[name=letter]");
+
+    var isStorageSupport = true;
+     var storage = "";
+
+     try {
+       storage = localStorage.getItem("name");
+     } catch (err) {
+       isStorageSupport = false;
+     }
+
+    var mapLink = document.querySelector(".contacts-map");
+
+    var mapPopup = document.querySelector(".modal-map");
+
+    var mapClose = document.querySelector(".modal-map-close");
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+
+      if (storage) {
+        login.value = storage;
+        email.focus();
+      } else {
+        name.focus();
+    }
+  });
+
+    close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.remove("modal-show");
+    });
+
+    form.addEventListener("submit", function(evt) {
+      if (!name.value || !email.value || !letter.value) {
+        evt.preventDefault();
+        console.log ("Заполните формы");
+      } else {
+        if (isStorageSupport) {
+        localStorage.setItem("name", name.value);
+        }
+      }
+    });
+
+    window.addEventListener("keydown", function (evt) {
+       if (evt.keyCode === 27) {
+         evt.preventDefault();
+         if (popup.classList.contains("modal-show")) {
+           popup.classList.remove("modal-show");
+         }
+       }
+     });
+
+    mapLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      mapPopup.classList.add("modal-show");
+    });
+
+    mapClose.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      mapPopup.classList.remove("modal-show");
+    });
+
+    window.addEventListener("keydown", function (evt) {
+       if (evt.keyCode === 27) {
+         evt.preventDefault();
+         if (mapPopup.classList.contains("modal-show")) {
+           mapPopup.classList.remove("modal-show");
+         }
+       }
+     });
+  </script>
   </body>
 </html>

@@ -643,10 +643,20 @@ button {
 }
 
 .main-contacts-link {
+  display: inline-block;
+
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #ee3643;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 3px;
   padding: 14px 59px 12px 63px;
 }
 
-.about-us a {
+.info-more {
   display: inline-block;
 
   color: #ffffff;
@@ -1040,7 +1050,7 @@ button {
   border-radius:3px;
 }
 
-.product-cart-link:after{
+.product-cart-link:after {
     content:"";
     position:absolute;
     top:0;
@@ -1139,6 +1149,8 @@ button {
   box-shadow: inset 0 -3px 0 #367315;
   background-color: #5fbb2d;
 }
+
+
 
 .cart-link:active {
   background-color: #518534;
@@ -1450,11 +1462,12 @@ input[type="radio"]:checked + .radio-indicator::after {
 }
 
 .modal-write-us {
+  display: none;
   width: 620px;
   min-height: 430px;
 
   top: 200px;
-  left: 620px;
+  transform: translateX(100%);
 
   background-color: #ffffff;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
@@ -1571,4 +1584,90 @@ input[type="radio"]:checked + .radio-indicator::after {
   background-color: #ee3643;
   border: none;
   border-radius: 3px;
+}
+
+.modal-map {
+  display: none;
+  top: 200px;
+  transform: translateX(50%);
+
+  width: 940px;
+  height: 447px;
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+.modal-map a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
+}
+
+.modal-map-close {
+  position: absolute;
+  top: 16px;
+  right: 9px;
+
+  width: 22px;
+  height: 22px;
+
+  background-color: transparent;
+  border: none;
+  z-index: 3;
+}
+
+.modal-map-close::before,
+.modal-map-close::after {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 0;
+
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #ee3643;
+}
+
+.modal-map-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-map-close::after {
+  transform: rotate(-45deg);
+}
+
+
+.modal-cart {
+  width: 620px;
+  height: 282px;
+
+  top: 200px;
+  transform: translateX(100%);
+
+  background-color: white;
+  box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
+}
+
+.modal-cart::before {
+  content: "";
+  width: 620px;
+  height: 7px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: red;
+}
+
+.modal-show {
+  display: block;
 }
