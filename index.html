@@ -211,19 +211,19 @@
     <section class="modal modal-write-us">
       <form class="modal-letter" action="index.html" method="post">
         <label>
-        <input type="text" name="name" placeholder="Имя Фамилия">
+        <input type="text" name="Имя" placeholder="Имя Фамилия">
         Ваше имя:
         </label>
         <label>
-          <input type="email" name="email" placeholder="email@example.com">
+          <input type="email" name="Почта" placeholder="email@example.com">
           Ваш e-mail:
         </label>
         <label>
-          <textarea name="letter" placeholder="В свободной форме"></textarea>
+          <textarea name="Комментарий" placeholder="В свободной форме"></textarea>
           Текст письма:
         </label>
         <button class="modal-send" type="submit" name="btn-send">Отправить</button>
-        <button class="modal-close" type="button" name="btn-close">
+        <button class="modal-write-us-close" type="button" name="btn-close">
           <span class="visually-hidden">Закрыть</span>
         </button>
       </form>
@@ -241,91 +241,6 @@
       </button>
     </section>
 
-  <script>
-    var link = document.querySelector(".main-contacts-link");
-
-    var popup = document.querySelector(".modal-write-us");
-
-    var close = popup.querySelector(".modal-close");
-
-    var form = popup.querySelector("form");
-
-    var name = popup.querySelector("[name=name]");
-
-    var email = popup.querySelector("[name=email]");
-
-    var letter = popup.querySelector("[name=letter]");
-
-    var isStorageSupport = true;
-     var storage = "";
-
-     try {
-       storage = localStorage.getItem("name");
-     } catch (err) {
-       isStorageSupport = false;
-     }
-
-    var mapLink = document.querySelector(".contacts-map");
-
-    var mapPopup = document.querySelector(".modal-map");
-
-    var mapClose = document.querySelector(".modal-map-close");
-
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-
-      if (storage) {
-        login.value = storage;
-        email.focus();
-      } else {
-        name.focus();
-    }
-  });
-
-    close.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.remove("modal-show");
-    });
-
-    form.addEventListener("submit", function(evt) {
-      if (!name.value || !email.value || !letter.value) {
-        evt.preventDefault();
-        console.log ("Заполните формы");
-      } else {
-        if (isStorageSupport) {
-        localStorage.setItem("name", name.value);
-        }
-      }
-    });
-
-    window.addEventListener("keydown", function (evt) {
-       if (evt.keyCode === 27) {
-         evt.preventDefault();
-         if (popup.classList.contains("modal-show")) {
-           popup.classList.remove("modal-show");
-         }
-       }
-     });
-
-    mapLink.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      mapPopup.classList.add("modal-show");
-    });
-
-    mapClose.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      mapPopup.classList.remove("modal-show");
-    });
-
-    window.addEventListener("keydown", function (evt) {
-       if (evt.keyCode === 27) {
-         evt.preventDefault();
-         if (mapPopup.classList.contains("modal-show")) {
-           mapPopup.classList.remove("modal-show");
-         }
-       }
-     });
-  </script>
+    <script src="js/main.js"></script>
   </body>
 </html>

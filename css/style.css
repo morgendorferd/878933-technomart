@@ -108,16 +108,6 @@ button {
   border: none;
 }
 
-.button-search {
-  height: 100%;
-  height: 100%;
-  padding-left: 13px;
-  padding-top: 5px;
-  border: none;
-  background-color: #293449;
-  opacity: 0.3;
-}
-
 .header-search-input {
   height: 100%;
   width: 100%;
@@ -128,6 +118,24 @@ button {
   border: none;
 }
 
+input::-webkit-input-placeholder {color:#ffffff;}
+input::-moz-placeholder          {color:#ffffff;}
+input:-moz-placeholder           {color:#ffffff;}
+input:-ms-input-placeholder      {color:#ffffff;}
+
+.button-search {
+  display: flex;
+  height: 100%;
+  height: 100%;
+  padding-left: 13px;
+  border: none;
+  background-color: #293449;
+}
+
+.button-search path {
+  fill: #606978;
+}
+
 .header-search:hover input[type="search"] {
   background-color: #212a3a;
   color: #ffffff;
@@ -135,21 +143,31 @@ button {
 
 .header-search:hover .button-search {
   background-color: #212a3a;
+}
+
+.header-search:hover .button-search path {
   fill: #ffffff;
   opacity: 1.0;
 }
 
-.header-search:active input[type="search"] {
+.header-search input[type="search"]:focus {
   background-color: #ffffff;
   color: #000000;
   border: none;
+  outline: none;
 }
 
-.icon-search {
-  background-color: #293449;
-  fill: #ffffff;
-  opacity: 0.3;
+input[type="search"]:focus + .button-search {
+  background-color: #ffffff;
 }
+
+input[type="search"]:focus + .button-search path {
+  fill: red;
+}
+
+/* .header-search input[type="search"]:focus .button-search {
+  background-color: #ffffff;
+} */
 
 .header-top-list {
   list-style: none;
@@ -194,13 +212,16 @@ button {
 
 .header-top-bookmarks {
   position: relative;
-  padding: 13px 25px 14px 44px;
+  padding-top: 15px;
+  padding-bottom: 12px;
+  padding-left: 39px;
+  padding-right: 36px;
 }
 
 .header-top-bookmarks::before {
   content: "";
   position: absolute;
-  top: 13px;
+  top: 15px;
   left: 12px;
 
   width: 14px;
@@ -223,13 +244,16 @@ button {
 
 .header-top-cart {
   position: relative;
-  padding: 13px 30px 14px 44px;
+  padding-top: 15px;
+  padding-bottom: 12px;
+  padding-left: 40px;
+  padding-right: 31px;
 }
 
 .header-top-cart::before {
   content: "";
   position: absolute;
-  top: 13px;
+  top: 15px;
   left: 11px;
 
   width: 14px;
@@ -253,7 +277,10 @@ button {
 .header-top-cart-autorized {
   position: relative;
   width: 150px;
-  padding: 13px 30px 14px 44px;
+  padding-top: 15px;
+  padding-bottom: 12px;
+  padding-left: 40px;
+  padding-right: 31px;
   background-color: #ee3643;
   color: #ffffff;
   font-family: Cuprum;
@@ -287,8 +314,7 @@ button {
 /* Стили header-middle */
 .header-middle {
   background-color: #f3f7f9;
-  margin-bottom: 20px;
-  /* padding-bottom: 35px; */
+  margin-bottom: 30px;
 }
 
 .header-middle-wrapper {
@@ -307,6 +333,7 @@ button {
   color: #ee3643;
   font-family: Cuprum;
   font-size: 16px;
+  font-weight: 400;
   font-style: italic;
   line-height: 23px;
 }
@@ -519,6 +546,9 @@ button {
 }
 
 /* Стили навигации в header */
+.header-bottom {
+  padding-bottom: 60px;
+}
 
 .header-nav-list {
   list-style: none;
@@ -539,8 +569,9 @@ button {
 .header-nav-link {
   display: block;
   width:auto;
-  padding: auto;
-  padding: 22px 30px;
+  padding: 0 30px;
+  padding-top: 19px;
+  padding-bottom: 23px;
   vertical-align: middle;
 
   color: #ffffff;
@@ -1150,7 +1181,9 @@ button {
   background-color: #5fbb2d;
 }
 
-
+.cart-link:hover::before {
+  opacity: 1.0;
+}
 
 .cart-link:active {
   background-color: #518534;
@@ -1486,10 +1519,10 @@ input[type="radio"]:checked + .radio-indicator::after {
   background-color: #ff5257;
 }
 
-.modal-close {
+.modal-write-us-close {
   position: absolute;
-  top: 16px;
-  right: 9px;
+  top: 15px;
+  right: 11px;
 
   width: 22px;
   height: 22px;
@@ -1498,25 +1531,26 @@ input[type="radio"]:checked + .radio-indicator::after {
   border: none;
 }
 
-.modal-close::before,
-.modal-close::after {
+.modal-write-us-close::before,
+.modal-write-us-close::after {
   content: "";
 
   position: absolute;
-  top: 10px;
-  left: 0;
+  top: 9px;
+  left: -1px;
 
-  width: 20px;
-  height: 3px;
+  width: 26px;
+  height: 4px;
+
   border-radius: 2px;
   background-color: #ee3643;
 }
 
-.modal-close::before {
+.modal-write-us-close::before {
   transform: rotate(45deg);
 }
 
-.modal-close::after {
+.modal-write-us-close::after {
   transform: rotate(-45deg);
 }
 
@@ -1549,12 +1583,33 @@ input[type="radio"]:checked + .radio-indicator::after {
   padding-top: 8px;
   padding-bottom: 8px;
   margin-bottom: 22px;
+  margin-top: 10px;
 
   color: #a9a9a9;
   font-family: "PT Sans";
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
+  border-radius: 3px;
+  border: 2px solid #d7dcde;;
+}
+
+.modal-letter input[name="Имя"]:hover {
+  border: 2px solid #b5b5b5;
+}
+
+.modal-letter input[name="Имя"]:focus {
+  border: 2px solid #ee3643;
+  outline: none;
+}
+
+.modal-letter input[name="Почта"]:hover {
+  border: 2px solid #b5b5b5;
+}
+
+.modal-letter input[name="Почта"]:focus {
+  border: 2px solid #ee3643;
+  outline: none;
 }
 
 .modal-letter textarea {
@@ -1564,12 +1619,24 @@ input[type="radio"]:checked + .radio-indicator::after {
   padding-left: 14px;
   padding-top: 11px;
   margin-bottom: 37px;
+  margin-top: 10px;
 
   color: #a9a9a9;
   font-family: "PT Sans";
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
+  border-radius: 3px;
+  border: 2px solid #d7dcde;;
+}
+
+.modal-letter textarea:hover {
+  border: 2px solid #b5b5b5;
+}
+
+.modal-letter textarea:focus {
+  border: 2px solid #ee3643;
+  outline: none;
 }
 
 .modal-send {
@@ -1613,8 +1680,8 @@ input[type="radio"]:checked + .radio-indicator::after {
 
 .modal-map-close {
   position: absolute;
-  top: 16px;
-  right: 9px;
+  top: 15px;
+  right: 11px;
 
   width: 22px;
   height: 22px;
@@ -1629,11 +1696,12 @@ input[type="radio"]:checked + .radio-indicator::after {
   content: "";
 
   position: absolute;
-  top: 10px;
-  left: 0;
+  top: 9px;
+  left: -1px;
 
-  width: 20px;
-  height: 3px;
+  width: 26px;
+  height: 4px;
+
   border-radius: 2px;
   background-color: #ee3643;
 }
@@ -1648,10 +1716,12 @@ input[type="radio"]:checked + .radio-indicator::after {
 
 
 .modal-cart {
+  display: none;
   width: 620px;
   height: 282px;
 
   top: 200px;
+  left: 21px;
   transform: translateX(100%);
 
   background-color: white;
@@ -1666,6 +1736,119 @@ input[type="radio"]:checked + .radio-indicator::after {
   top: 0px;
   left: 0px;
   background-color: red;
+}
+
+.modal-cart p {
+  margin: 0px;
+  padding-top: 73px;
+  padding-bottom: 68px;
+  padding-left: 179px;
+  padding-right: 125px;
+
+  position: relative;
+
+  color: #000000;
+  font-family: Cuprum;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.modal-cart p::before {
+  content: "";
+
+  width: 66px;
+  height: 66px;
+  margin: 0px;
+
+  position: absolute;
+  top: 56px;
+  left: 81px;
+
+  background-image: url("../img/content-img/form-1.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.modal-cart-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 36px;
+  background-color: #f1f1f1;
+}
+
+.modal-cart-buy {
+  margin-left: 80px;
+  margin-top: 7px;
+  padding-top: 10px;
+  padding-left: 59px;
+  padding-bottom: 10px;
+  padding-right: 62px;
+
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  border-radius: 3px;
+}
+
+.modal-cart-return {
+  margin-left: 18px;
+  margin-top: 7px;
+  padding-top: 10px;
+  padding-left: 46px;
+  padding-bottom: 10px;
+  padding-right: 49px;
+
+  color: #000000;
+  font-family: Cuprum;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+.modal-cart-close {
+  position: absolute;
+
+  top: 15px;
+  right: 11px;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.modal-cart-close::before,
+.modal-cart-close::after {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  left: -1px;
+
+  width: 26px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #ee3643;
+}
+
+.modal-cart-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-cart-close::after {
+  transform: rotate(-45deg);
 }
 
 .modal-show {
