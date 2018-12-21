@@ -265,6 +265,18 @@ input[type="search"]:focus + .button-search path {
   opacity: 0.3;
 }
 
+.header-top-bookmarks:hover,
+.header-top-bookmarks:focus,
+.header-top-cart:hover,
+.header-top-cart:focus {
+  background-color: #212a3a;
+}
+
+.header-top-bookmarks:active,
+.header-top-cart:active {
+  opacity: 0.6;
+}
+
 .header-top-cart:hover::before,
  .header-top-cart:focus::before {
   opacity: 1.0;
@@ -301,6 +313,10 @@ input[type="search"]:focus + .button-search path {
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
+}
+
+.header-top-cart-autorized:active {
+  opacity: 0.6;
 }
 
 .header-top-cart-autorized:hover::before,
