@@ -23,7 +23,7 @@ var storage = "";
 
 contactsLink.addEventListener("click", function (evt) {
   evt.preventDefault();
- contactsPopup.classList.add("modal-show");
+  contactsPopup.classList.add("modal-show");
 
   if (storage) {
     contactsName.value = storage;
@@ -35,13 +35,17 @@ contactsLink.addEventListener("click", function (evt) {
 
 contactsBtnClose.addEventListener("click", function (evt) {
   evt.preventDefault();
- contactsPopup.classList.remove("modal-show");
+  contactsPopup.classList.remove("modal-show");
+  contactsPopup.classList.remove("modal-error");
 });
 
 contactsForm.addEventListener("submit", function(evt) {
   if (!contactsName.value || !contactsEmail.value || !contactsTextarea.value) {
     evt.preventDefault();
     console.log ("Заполните формы");
+    contactsPopup.classList.remove("modal-error");
+    contactsPopup.offsetWidth = contactsPopup.offsetWidth;
+    contactsPopup.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
     localStorage.setItem("name", contactsName.value);
@@ -54,6 +58,7 @@ window.addEventListener("keydown", function (evt) {
      evt.preventDefault();
      if (contactsPopup.classList.contains("modal-show")) {
       contactsPopup.classList.remove("modal-show");
+      contactsPopup.classList.remove("modal-error");
      }
    }
  });

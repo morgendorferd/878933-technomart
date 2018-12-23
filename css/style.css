@@ -1506,6 +1506,46 @@ input[type="radio"]:checked + .radio-indicator::after {
   text-transform: uppercase;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
   position: fixed;
 }
@@ -1516,7 +1556,7 @@ input[type="radio"]:checked + .radio-indicator::after {
   min-height: 430px;
 
   top: 200px;
-  transform: translateX(100%);
+  left: 641px;
 
   background-color: #ffffff;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
@@ -1672,7 +1712,7 @@ input[type="radio"]:checked + .radio-indicator::after {
 .modal-map {
   display: none;
   top: 200px;
-  transform: translateX(50%);
+  left: 483px;
 
   width: 940px;
   height: 447px;
@@ -1737,8 +1777,7 @@ input[type="radio"]:checked + .radio-indicator::after {
   height: 282px;
 
   top: 200px;
-  left: 21px;
-  transform: translateX(100%);
+  left: 641px;
 
   background-color: white;
   box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
@@ -1869,4 +1908,10 @@ input[type="radio"]:checked + .radio-indicator::after {
 
 .modal-show {
   display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
