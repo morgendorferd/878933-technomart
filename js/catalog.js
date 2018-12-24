@@ -1,16 +1,13 @@
-var
-    cartPopup = document.querySelector(".modal-cart"),
-    cartClose = document.querySelector('.modal-cart-close');
-
-
-
-var cartLinkElements = document.querySelectorAll('.cart-link');
+var cartPopup = document.querySelector(".modal-cart"),
+    cartClose = document.querySelector('.modal-cart-close'),
+    cartLinkElements = document.querySelectorAll('.cart-link');
 for (var i = 0; i < cartLinkElements.length; i++) {
   var cartLink = cartLinkElements[i];
   cartLink.addEventListener("click", function (evt) {
     evt.preventDefault();
      cartPopup.classList.add('modal-show');
- })};
+ })
+};
 
   cartClose.addEventListener("click", function (evt) {
     evt.preventDefault();

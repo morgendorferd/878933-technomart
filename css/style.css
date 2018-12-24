@@ -21,6 +21,10 @@ button {
   cursor: pointer;
 }
 
+iframe {
+  border-width: 0px;
+}
+
 .visually-hidden {
   position: absolute;
 
@@ -1351,7 +1355,7 @@ input[type="search"]:focus + .button-search path {
   left: 106px;
   width: 10px;
   height: 1px;
-  background-colors: #444444;
+  background-color: #444444;
 }
 
 .price-controls input {

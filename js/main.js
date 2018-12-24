@@ -42,7 +42,6 @@ contactsBtnClose.addEventListener("click", function (evt) {
 contactsForm.addEventListener("submit", function(evt) {
   if (!contactsName.value || !contactsEmail.value || !contactsTextarea.value) {
     evt.preventDefault();
-    console.log ("Заполните формы");
     contactsPopup.classList.remove("modal-error");
     contactsPopup.offsetWidth = contactsPopup.offsetWidth;
     contactsPopup.classList.add("modal-error");
@@ -81,8 +80,3 @@ window.addEventListener("keydown", function (evt) {
      }
    }
  });
-
- cartLink.addEventListener("click", function (evt) {
-   evt.preventDefault();
-   cartPopup.classList.add("modal-show");
-});
