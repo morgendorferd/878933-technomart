@@ -91,9 +91,9 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="main-content">
     <h2 class="visually-hidden">Главная страница интернет-магазина "Техномарт"</h2>
-    <section class="popular-products">
+    <section class="popular-products container">
       <div class="popular-wrapper">
         <h3 class="popular-products-title">Популярные товары:</h3>
         <a class="popular-products-link" href="#">Все популярные товары</a>
@@ -189,7 +189,7 @@
       </ul>
     </section>
 
-    <section class="brands">
+    <section class="brands container">
       <div class="brands-wrapper">
         <h3 class="brands-title">Популярные производители:</h3>
         <a class="brands-link" href="#">Все производители</a>
@@ -238,22 +238,22 @@
       </ul>
     </section>
 
-    <section class="service">
+    <section class="service container">
       <h3 class="service-title">Сервисы</h3>
       <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-      <input class="visually-hidden" type="radio" id="slider-delivery" name="toggle" checked>
-      <input class="visually-hidden" type="radio" id="slider-guarantee" name="toggle">
-      <input class="visually-hidden" type="radio" id="slider-credit" name="toggle">
       <div class="service-slider">
+        <input class="visually-hidden" type="radio" id="slider-delivery" name="toggle" checked>
+        <input class="visually-hidden" type="radio" id="slider-guarantee" name="toggle">
+        <input class="visually-hidden" type="radio" id="slider-credit" name="toggle">
         <ul class="service-controls-list">
           <li class="service-controls-item">
-            <label for="slider-delivery">Доставка</label>
+            <label class="controls-delivery" for="slider-delivery">Доставка</label>
           </li>
           <li class="service-controls-item">
-            <label for="slider-guarantee">Гарантия</label>
+            <label class="controls-guarantee" for="slider-guarantee">Гарантия</label>
           </li>
           <li class="service-controls-item">
-            <label for="slider-credit">Кредит</label>
+            <label class="controls-credit" for="slider-credit">Кредит</label>
           </li>
         </ul>
         <ul class="service-slider-list">
@@ -274,12 +274,11 @@
             <a class="service-credit-link" href="#">ОТПРАВИТЬ ЗАЯВКУ</a>
           </li>
         </ul>
-
       </div>
     </section>
 
 
-    <div class="about-us">
+    <div class="about-us container">
       <section class="info">
         <h3 class="info-title">Компания "Техномарт"</h3>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>

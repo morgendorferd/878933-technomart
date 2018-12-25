@@ -2237,6 +2237,7 @@ input[type="radio"]:checked + .radio-indicator::after {
   display: flex;
   justify-content: flex-start;
   position: relative;
+  margin-bottom: 80px;
 }
 
 .service-slider-list {
@@ -2249,6 +2250,7 @@ input[type="radio"]:checked + .radio-indicator::after {
 
 .service-slider-item {
   width: 620px;
+  height: 100%;
 }
 
 .delivery p {
@@ -2266,19 +2268,19 @@ input[type="radio"]:checked + .radio-indicator::after {
 .delivery {
   background-image: url("../img/content-img/slider-delivery.png");
   background-repeat: no-repeat;
-  background-position: 100% 85%;
+  background-position: 100% 100%;
 }
 
 .guarantee {
   background-image: url("../img/content-img/slider-guarantee.png");
   background-repeat: no-repeat;
-  background-position: 100% 0%;
+  background-position: 100% 100%;
 }
 
 .credit {
   background-image: url("../img/content-img/slider-credit.png");
   background-repeat: no-repeat;
-  background-position: 100% 0%;
+  background-position: 100% 100%;
 }
 
 .service-slider-item h4 {
@@ -2323,15 +2325,15 @@ input[type="radio"]:checked + .radio-indicator::after {
 .service-controls-list {
   list-style: none;
   margin: 0;
+  margin-bottom: 102px;
   padding-left: 0;
 }
 
 .service-controls-item {
+  display: flex;
   box-sizing: border-box;
   width: 240px;
   min-height: 61px;
-  padding-left: 22px;
-  padding-top: 15px;
 
   color: #ffffff;
   font-family: Cuprum;
@@ -2343,12 +2345,17 @@ input[type="radio"]:checked + .radio-indicator::after {
 }
 
 .service-controls-item label {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 13px;
+  padding-left: 22px;
+
   cursor: pointer;
 }
 
-/* .service-slider-item {
+.service-slider-item {
   display: none;
-} */
+}
 
 #slider-delivery:checked ~ .service-slider-list .service-slider-item.delivery {
   display: block;
@@ -2360,4 +2367,20 @@ input[type="radio"]:checked + .radio-indicator::after {
 
 #slider-credit:checked ~ .service-slider-list .service-slider-item.credit {
   display: block;
+}
+
+
+#slider-delivery:checked ~ .service-controls-list .controls-delivery {
+  background-color: white;
+  color: #32425c;
+}
+
+#slider-guarantee:checked ~ .service-controls-list .controls-guarantee {
+  background-color: white;
+  color: #32425c;
+}
+
+#slider-credit:checked ~ .service-controls-list .controls-credit {
+  background-color: white;
+  color: #32425c;
 }
