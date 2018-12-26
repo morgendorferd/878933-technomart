@@ -1002,6 +1002,90 @@ input[type="search"]:focus .button-search path {
   text-transform: uppercase;
 }
 
+/* Раздел сортировка */
+
+.sort {
+  display: flex;
+  width: 700px;
+  background-color: #f7f3ec;
+}
+
+.sort-title {
+  margin: 0;
+  margin-right: 70px;
+  padding-top: 9px;
+  padding-left: 19px;
+  padding-bottom: 9px;
+  margin-top: 0;
+  color: #000000;
+  font-family: "PT Sans";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sort-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.sort-item-link {
+  margin-left: 70px;
+  padding-top: 9px;
+  opacity: 0.3;
+  color: #000000;
+  font-family: "PT Sans";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  border-bottom: 1px dashed #ee3643;
+}
+
+.sort-item-link:hover {
+  opacity: 1.0;
+  color: #000000;
+  border-bottom: 1px solid #ee3643;
+}
+
+.sort-item-link:focus,
+.sort-item-link:active {
+  color: #ee3643;
+  opacity: 1.0;
+  border: none;
+}
+
+.sort-btn-up {
+  margin-top: 7px;
+  margin-left: 42px;
+}
+
+.sort-btn-dn {
+  margin-top: 7px;
+  margin-left: 20px;
+}
+
+.sort-btn-up path,
+.sort-btn-dn path {
+  fill: #c5c5c5;
+}
+
+.sort-btn-up:hover path,
+.sort-btn-dn:hover path {
+  fill: #231f20;
+}
+
+.sort-btn-up:active path,
+.sort-btn-dn:active path,
+.sort-btn-up:focus path,
+.sort-btn-dn:focus path {
+  fill: #ee3643;
+}
+
 /* Стили заголовка */
 .catalog-title {
   padding-top: 30px;
@@ -1019,8 +1103,6 @@ input[type="search"]:focus .button-search path {
 
 .catalog {
   width: 700px;
-
-  margin-top: 37px;
 }
 
 .catalog-main-wrapper {
@@ -2345,10 +2427,22 @@ input[type="radio"]:checked + .radio-indicator::after {
 }
 
 .service-controls-list {
+  position: relative;
   list-style: none;
   margin: 0;
   margin-bottom: 102px;
   padding-left: 0;
+}
+
+.service-controls-list::after {
+  content: "";
+
+  position: absolute;
+  width: 10px;
+  height: 279px;
+  top: -37px;
+  right: 0px;
+
   background-image: url("../img/content-img/slider-controls-stripe.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -2374,6 +2468,7 @@ input[type="radio"]:checked + .radio-indicator::after {
   width: 100%;
   padding-top: 13px;
   padding-left: 22px;
+  border-top: 2px solid #4e637c;
 
   cursor: pointer;
 }
@@ -2403,17 +2498,26 @@ input[type="radio"]:checked + .radio-indicator::after {
 #slider-delivery:checked ~ .service-controls-list .controls-delivery {
   background-color: white;
   color: #32425c;
+  border: none;
 }
 
 #slider-guarantee:checked ~ .service-controls-list .controls-guarantee {
   background-color: white;
   color: #32425c;
+  border: none;
 }
 
 #slider-credit:checked ~ .service-controls-list .controls-credit {
   background-color: white;
   color: #32425c;
+  border: none;
 }
+
+/* .service-controls-list::after {
+  content: "";
+
+
+} */
 
 /* Стилизация слайдера promo */
 .promo-slider {
