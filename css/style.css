@@ -1059,6 +1059,13 @@ input[type="search"]:focus .button-search path {
   border: none;
 }
 
+.sort-btn-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
 .sort-btn-up {
   margin-top: 7px;
   margin-left: 42px;
