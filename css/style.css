@@ -119,6 +119,7 @@ iframe {
   color: #ffffff;
   background-color: #293449;
   border: none;
+  order: 2;
 }
 
 input::-webkit-input-placeholder {color:#ffffff;}
@@ -133,6 +134,7 @@ input:-ms-input-placeholder      {color:#ffffff;}
   padding-left: 17px;
   border: none;
   background-color: #293449;
+  order: 1;
 }
 
 .button-search path {
@@ -144,14 +146,14 @@ input:-ms-input-placeholder      {color:#ffffff;}
   color: #ffffff;
 }
 
-.header-search:hover .button-search {
+/* .header-search:hover + .button-search {
   background-color: #212a3a;
 }
 
-.header-search:hover .button-search path {
+.header-search:hover + .button-search path {
   fill: #ffffff;
   opacity: 1.0;
-}
+} */
 
 .header-search input[type="search"]:focus {
   background-color: #ffffff;
@@ -160,13 +162,14 @@ input:-ms-input-placeholder      {color:#ffffff;}
   outline: none;
 }
 
-input[type="search"]:focus .button-search path {
+input[name="search"]:focus + .button-search {
   background-color: #ffffff;
 }
 
-input[type="search"]:focus .button-search path {
-  fill: #ee3643;
+input[name="search"]:focus + .button-search path {
+  fill: red;
 }
+
 
 .header-top-list {
   list-style: none;
