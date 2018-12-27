@@ -156,6 +156,7 @@ input:-ms-input-placeholder      {color:#ffffff;}
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  flex: 1 0 auto;
   height: 100%;
   padding-left: 17px;
   border: none;
@@ -755,7 +756,7 @@ input[name="search"]:focus + .button-search path {
 }
 
 .main-contacts p {
-  width: 179px;
+  width: 185px;
   padding: 15px 0;
 
   color: #000000;
@@ -878,7 +879,7 @@ input[name="search"]:focus + .button-search path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 53px;
+  margin-bottom: 50px;
 }
 
 /* Стили для контактов в footer */
@@ -1002,7 +1003,7 @@ input[name="search"]:focus + .button-search path {
 /* Стили для copyright */
 
 .copyright {
-  width: 227px;
+  width: 230px;
   color: #ffffff;
   font-family: Cuprum;
   font-size: 16px;
@@ -1027,6 +1028,7 @@ input[name="search"]:focus + .button-search path {
 
 .develop {
   margin-left: auto;
+  margin-right: 16px;
 }
 
 .feedback a,
@@ -2899,7 +2901,7 @@ input[type="radio"]:disabled {
 
   height: 10px;
   text-align: center;
-  z-index: 1000;
+  z-index: 4;
 }
 
 .promo-slider-control {
