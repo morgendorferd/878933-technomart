@@ -284,8 +284,8 @@ input[name="search"]:focus + .button-search path {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   padding-left: 48px;
   padding-right: 31px;
 }
@@ -352,6 +352,11 @@ input[name="search"]:focus + .button-search path {
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
+}
+
+.header-top-cart-autorized:hover {
+  background-color: #ee3643;
+  
 }
 
 .header-top-cart-autorized:active {
@@ -1713,6 +1718,11 @@ input[name="search"]:focus + .button-search path {
   border: none;
 }
 
+.price-controls:last-child {
+  margin-right: 0;
+  margin-left: auto;
+}
+
 .filter-companies {
   position: relative;
   margin-bottom: 23px;
@@ -1759,9 +1769,11 @@ input[name="search"]:focus + .button-search path {
   opacity: 0.4;
 }
 
-fieldset label {
+.companies-checkbox,
+.supply-radio {
   display: block;
 
+  margin-top: 2px;
   padding-left: 16px;
   position: relative;
   cursor: pointer;
@@ -1840,10 +1852,14 @@ input[type="radio"]:checked + .radio-indicator::after {
   opacity: 0.77;
 }
 
-input[type="checkbox"]:disabled,
+/* input[type="checkbox"]:disabled,
 input[type="radio"]:disabled {
   opacity: 0.4;
-}
+} */
+
+ input[type="checkbox"]:disabled + .checkbox-indicator::before {
+   opacity: 0.4;
+ }
 
 .supply-radio:hover input[type="radio"] + .radio-indicator::before,
 .companies-checkbox:hover input[type="checkbox"] + .checkbox-indicator::before {
@@ -2931,7 +2947,7 @@ input[type="radio"]:disabled {
   width: 22px;
   height: 40px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 4;
   background: none;
   border: none;
 }
