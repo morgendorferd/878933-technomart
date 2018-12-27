@@ -1,17 +1,14 @@
+*,
+*::before,
+*::after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  *,
-  *::before,
-  *::after {
-  box-sizing: border-box;
-}
-
-  -webkit-box-sizing: border-box;
-
-          box-sizing: border-box;
-
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -23,10 +20,6 @@ a {
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
-  cursor: pointer;
-}
-
-button {
   cursor: pointer;
 }
 
@@ -84,7 +77,6 @@ iframe {
       flex-wrap: wrap;
 }
 
-/* Разметка логотипа */
 .header-logo {
   height: 42px;
 }
@@ -111,8 +103,6 @@ iframe {
 .header-logo:active .logo-hover {
   display: none;
 }
-
-/* Форма поиска */
 
 .header-search {
   display: -webkit-box;
@@ -356,7 +346,7 @@ input[name="search"]:focus + .button-search path {
 
 .header-top-cart-autorized:hover {
   background-color: #ee3643;
-  
+
 }
 
 .header-top-cart-autorized:active {
@@ -371,7 +361,7 @@ input[name="search"]:focus + .button-search path {
 .header-top-cart-autorized:active::before {
   opacity: 0.5;
 }
-/* Стили header-middle */
+
 .header-middle {
   background-color: #f3f7f9;
   margin-bottom: 38px;
@@ -388,7 +378,6 @@ input[name="search"]:focus + .button-search path {
           justify-content: flex-start;
 }
 
-/* Стили названия страницы */
 .index-title {
   width: 197px;
   margin: 0;
@@ -404,7 +393,6 @@ input[name="search"]:focus + .button-search path {
   line-height: 23px;
 }
 
-/* Стили блока контактов в header */
 .header-contacts p {
   margin: 0px;
   margin-right: 50px;
@@ -521,7 +509,6 @@ input[name="search"]:focus + .button-search path {
 
 }
 
-/* Стили reg-nav в каталоге */
 .reg-nav-list {
   list-style: none;
   margin: 0;
@@ -629,7 +616,6 @@ input[name="search"]:focus + .button-search path {
   margin-top: 6px;
 }
 
-/* Стили навигации в header */
 .header-bottom {
   padding-bottom: 60px;
 }
@@ -678,13 +664,10 @@ input[name="search"]:focus + .button-search path {
   opacity: 0.5;
 }
 
-/* Стилизация main */
-
 .main-content {
   margin-top: 60px;
 }
 
-/*Стили для "О компании"  */
 .about-us {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -745,7 +728,6 @@ input[name="search"]:focus + .button-search path {
   padding: 10px 40px 10px 41px;
 }
 
-/* Стили для контактов в main */
 .main-contacts {
   width: 300px;
   margin: 0;
@@ -809,10 +791,7 @@ input[name="search"]:focus + .button-search path {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-
 }
-
-/* Стили для footer */
 
 .footer-main {
   color: #f3f7f9;
@@ -821,7 +800,6 @@ input[name="search"]:focus + .button-search path {
   background-color: #32425c;
 }
 
-/* Убираем маркеры со списков */
 .footer-nav-list,
 .footer-menu-list,
 .social-list {
@@ -879,7 +857,6 @@ input[name="search"]:focus + .button-search path {
   text-decoration: none
 }
 
-/* Стили для footer-middle */
 .footer-middle{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -887,14 +864,13 @@ input[name="search"]:focus + .button-search path {
   margin-bottom: 50px;
 }
 
-/* Стили для контактов в footer */
 .footer-contacts {
   color: #f1f5f7;
   font-family: Cuprum;
   font-size: 18px;
   line-height: 24px;
 }
-/* Белый цвет для ссылки-телефона */
+
 .footer-contacts a {
   color: #f1f5f7;
 }
@@ -904,7 +880,6 @@ input[name="search"]:focus + .button-search path {
   margin: 0;
   padding: 0;
 }
-/* Стили для меню в footer  */
 
 .footer-menu-list {
   display: -webkit-box;
@@ -1005,8 +980,6 @@ input[name="search"]:focus + .button-search path {
   background-color: #ee3643;
 }
 
-/* Стили для copyright */
-
 .copyright {
   width: 230px;
   color: #ffffff;
@@ -1016,8 +989,6 @@ input[name="search"]:focus + .button-search path {
   margin-right: 165px;
 }
 
-/* Стили для feedback */
-/* Стили для develop */
 .feedback,
 .develop {
   color: #ffffff;
@@ -1053,10 +1024,6 @@ input[name="search"]:focus + .button-search path {
   color: #ee3643;
   text-decoration: none
 }
-
-
-/* Каталог */
-/* Стили breadcrumbs */
 
 .breadcrumbs {
   display: -webkit-box;
@@ -1113,8 +1080,6 @@ input[name="search"]:focus + .button-search path {
   line-height: 18px;
   text-transform: uppercase;
 }
-
-/* Раздел сортировка */
 
 .sort {
   display: -webkit-box;
@@ -1224,7 +1189,6 @@ input[name="search"]:focus + .button-search path {
   fill: #ee3643;
 }
 
-/* Стили заголовка */
 .catalog-title {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -1236,8 +1200,6 @@ input[name="search"]:focus + .button-search path {
   text-transform: uppercase;
   background-color: #f2f6f8;
 }
-
-/* Стили каталога */
 
 .catalog {
   width: 700px;
@@ -1253,7 +1215,6 @@ input[name="search"]:focus + .button-search path {
   margin-bottom: 60px;
 }
 
-/* Стили карточки товара */
 .catalog-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1502,8 +1463,6 @@ input[name="search"]:focus + .button-search path {
   border: 3px solid #32425c;
 }
 
-/* Стили для пагинации */
-
 .pagination-list {
   list-style: none;
   padding: 0;
@@ -1556,7 +1515,6 @@ input[name="search"]:focus + .button-search path {
   text-transform: uppercase;
 }
 
-/* Стили для фильтров */
 .filter {
   width: 220px;
 }
@@ -1852,24 +1810,23 @@ input[type="radio"]:checked + .radio-indicator::after {
   opacity: 0.77;
 }
 
-/* input[type="checkbox"]:disabled,
-input[type="radio"]:disabled {
-  opacity: 0.4;
-} */
-
- input[type="checkbox"]:disabled + .checkbox-indicator::before {
+ input[type="checkbox"]:disabled + .checkbox-indicator::before,
+ input[type="checkbox"]:disabled + .checkbox-indicator::after,
+ input[type="radio"]:disabled + .radio-indicator::before,
+ input[type="radio"]:disabled + .radio-indicator::after,
+ input[type="checkbox"]:disabled ~ .checkbox-text {
    opacity: 0.4;
  }
 
-.supply-radio:hover input[type="radio"] + .radio-indicator::before,
-.companies-checkbox:hover input[type="checkbox"] + .checkbox-indicator::before {
-  opacity: 1.0;
-}
 
-.supply-radio:hover input[type="radio"] + .radio-indicator::after,
-.companies-checkbox:hover input[type="checkbox"] + .checkbox-indicator::after {
-  opacity: 1.0;
-}
+ input[type="checkbox"]:hover + .checkbox-indicator::before,
+ input[type="checkbox"]:hover + .checkbox-indicator::after,
+ input[type="radio"]:hover + .radio-indicator::before,
+ input[type="radio"]:hover + .radio-indicator::after {
+   opacity: 1.0;
+ }
+
+
 
 .filter-show {
   width: 140px;
@@ -2670,8 +2627,6 @@ input[type="radio"]:disabled {
   opacity: 0.3;
 }
 
-/* Стилизация слайдера Сервисы */
-
 .service h3 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2885,13 +2840,6 @@ input[type="radio"]:disabled {
   border: none;
 }
 
-/* .service-controls-list::after {
-  content: "";
-
-
-} */
-
-/* Стилизация слайдера promo */
 .promo-slider {
   position: relative;
   display: -webkit-box;
