@@ -17,10 +17,6 @@ a {
   cursor: pointer;
 }
 
-button {
-  cursor: pointer;
-}
-
 iframe {
   border-width: 0px;
 }
@@ -1709,7 +1705,7 @@ input[name="search"]:focus + .button-search path {
   border: none;
 }
 
-.price-controls:last-child {
+.price-controls label:last-child {
   margin-right: 0;
   margin-left: auto;
 }
@@ -1872,7 +1868,7 @@ input[type="radio"]:checked + .radio-indicator::after {
 
 .filter-show {
   width: 140px;
-  margin-top: 60px;
+  margin-top: 55px;
   padding: 10px 39px 10px 39px;
 
   border: 1px solid #e5e5e5;
