@@ -1843,27 +1843,32 @@ input[type="radio"]:checked + .radio-indicator::after {
   opacity: 0.77;
 }
 
-/* input[type="checkbox"]:disabled,
-input[type="radio"]:disabled {
-  opacity: 0.4;
-} */
+.checkbox-text {
+  opacity: 0.77;
+}
+
+.radio-text {
+  opacity: 0.77;
+}
 
  input[type="checkbox"]:disabled + .checkbox-indicator::before,
  input[type="checkbox"]:disabled + .checkbox-indicator::after,
+ input[type="checkbox"]:disabled ~ .checkbox-text,
  input[type="radio"]:disabled + .radio-indicator::before,
- input[type="radio"]:disabled + .radio-indicator::after {
+ input[type="radio"]:disabled + .radio-indicator::after,
+ input[type="radio"]:disabled ~ .radio-text {
    opacity: 0.4;
  }
 
 
  input[type="checkbox"]:hover + .checkbox-indicator::before,
  input[type="checkbox"]:hover + .checkbox-indicator::after,
+ input[type="checkbox"]:hover ~ .checkbox-text,
  input[type="radio"]:hover + .radio-indicator::before,
- input[type="radio"]:hover + .radio-indicator::after {
+ input[type="radio"]:hover + .radio-indicator::after,
+ input[type="radio"]:hover ~ .radio-text {
    opacity: 1.0;
  }
-
-
 
 .filter-show {
   width: 140px;
