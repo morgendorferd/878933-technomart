@@ -1,4 +1,5 @@
-btnPrev = document.querySelector(".promo-slider-toggle--prev"),
+(function () {
+var btnPrev = document.querySelector(".promo-slider-toggle--prev"),
 btnNext = document.querySelector(".promo-slider-toggle--next"),
 images = document.querySelectorAll(".promo-slide"),
 pointsArray = document.querySelectorAll(".promo-slider-control");
@@ -61,3 +62,5 @@ let slideThroughPoints = function () {
 };
 
 slideThroughPoints();
+
+})();

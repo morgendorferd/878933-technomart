@@ -13,6 +13,7 @@ body {
 
 a {
   display: inline-block;
+  vertical-align: middle;
   text-decoration: none;
   cursor: pointer;
 }
@@ -141,21 +142,16 @@ input:-ms-input-placeholder      {color:#ffffff;}
   fill: #606978;
 }
 
-.header-search:hover input[type="search"] {
+input[type="search"]:hover {
   background-color: #212a3a;
   color: #ffffff;
 }
 
-/* .header-search:hover + .button-search {
+input[name="search"]:hover + .button-search {
   background-color: #212a3a;
 }
 
-.header-search:hover + .button-search path {
-  fill: #ffffff;
-  opacity: 1.0;
-} */
-
-.header-search input[type="search"]:focus {
+input[type="search"]:focus {
   background-color: #ffffff;
   color: #000000;
   border: none;
@@ -169,7 +165,6 @@ input[name="search"]:focus + .button-search {
 input[name="search"]:focus + .button-search path {
   fill: red;
 }
-
 
 .header-top-list {
   list-style: none;
@@ -195,6 +190,7 @@ input[name="search"]:focus + .button-search path {
   padding: 12px 21px 12px;
   box-sizing: border-box;
   display: inline-block;
+  vertical-align: middle;
   width: 150px;
   color: #ffffff;
   font-family: Cuprum;
@@ -709,6 +705,7 @@ input[name="search"]:focus + .button-search path {
 
 .main-contacts-link {
   display: inline-block;
+  vertical-align: middle;
 
   color: #ffffff;
   font-family: Cuprum;
@@ -723,6 +720,7 @@ input[name="search"]:focus + .button-search path {
 
 .info-more {
   display: inline-block;
+  vertical-align: middle;
 
   color: #ffffff;
   font-family: Cuprum;
@@ -877,12 +875,15 @@ input[name="search"]:focus + .button-search path {
 
 .social-list {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin-right: 119px;
+  max-width: 135px;
 }
 
 .social-item:not(:last-of-type) {
   margin-right: 4px;
+  margin-bottom: 4px;
 }
 
 .social-link {
@@ -1093,6 +1094,16 @@ input[name="search"]:focus + .button-search path {
 .sort-btn-dn:active path,
 .sort-btn-up:focus path,
 .sort-btn-dn:focus path {
+  fill: #ee3643;
+}
+
+.active {
+  color: #ee3643;
+  border: none;
+  opacity: 1.0;
+}
+
+.btn-active path {
   fill: #ee3643;
 }
 
@@ -1463,7 +1474,6 @@ input[name="search"]:focus + .button-search path {
   padding-bottom: 10px;
   margin-bottom: 5px;
   background-color: #f7f3ec;
-
 }
 
 .scale {
@@ -1556,7 +1566,8 @@ input[name="search"]:focus + .button-search path {
   letter-spacing: 0.05px;
 }
 
-.companies-list, .supply-list {
+.companies-list,
+.supply-list {
   margin: 0 auto;
   padding: 0;
   list-style: none;
@@ -1656,6 +1667,31 @@ input[type="radio"]:checked + .radio-indicator::after {
   background-repeat: no-repeat;
   background-position: 0 0;
 }
+
+.companies-checkbox:checked,
+.supply-radio:checked {
+  opacity: 0.4;
+}
+
+.companies-checkbox:hover input[type="checkbox"] + .checkbox-indicator::after {
+  content: "";
+
+  position: absolute;
+  top: -2px;
+  left: -34px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/content-img/checkbox-on-hover.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/* .supply-radio:hover input[type="radio"] + .radio-indicator::after,
+.supply-radio:hover input[type="radio"] + .radio-indicator::before {
+  opacity: 0.1;
+} */
 
 .filter-show {
   width: 140px;
@@ -2139,6 +2175,7 @@ input[type="radio"]:checked + .radio-indicator::after {
 
 .popular-products-link {
   display: inline-block;
+  vertical-align: middle;
 
   color: #ffffff;
   font-family: Cuprum;
@@ -2157,6 +2194,7 @@ input[type="radio"]:checked + .radio-indicator::after {
 
 .brands-link {
   display: inline-block;
+  vertical-align: middle;
 
   color: #ffffff;
   font-family: Cuprum;
@@ -2554,6 +2592,7 @@ input[type="radio"]:checked + .radio-indicator::after {
 
 .promo-slider-control {
   display: inline-block;
+  vertical-align: middle;
   width: 5px;
   height: 5px;
 
