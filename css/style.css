@@ -52,7 +52,6 @@ iframe {
 }
 
 .header-top {
-  min-height: 42px;
   margin-bottom: 46px;
 
   background-color: #293449;
@@ -61,6 +60,8 @@ iframe {
 }
 
 .header-top-wrapper {
+  min-height: 42px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,35 +72,57 @@ iframe {
       flex-wrap: wrap;
 }
 
-/* Разметка логотипа */
 .header-logo {
-  height: 42px;
-}
-
-.header-logo .logo-hover,
-.header-logo .logo-active {
-  display: none;
-}
-
-.header-logo:hover .main-logo,
-.header-logo:hover .logo-active {
-  display: none;
-}
-
-.header-logo:hover .logo-hover {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: inline-block;
+  vertical-align: middle;
+  width: 220px;
+  height: 47px;
+  -webkit-box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+  background-color: #ee3643;
+
+  padding-top: 10px;
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.header-logo:active .logo-active {
+.header-logo:hover,
+.header-logo:focus {
+  background-color: #ca2c37;
+}
+
+.header-logo:active {
+  background-color: #ba2732;
+}
+
+.footer-logo {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: inline-block;
-}
+  vertical-align: middle;
+  width: 220px;
+  height: 68px;
+  -webkit-box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+  background-color: #ee3643;
 
-.header-logo:active .main-logo,
-.header-logo:active .logo-hover {
-  display: none;
+  padding-top: 18px;
+  color: #ffffff;
+  font-family: Cuprum;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
 }
-
-/* Форма поиска */
 
 .header-search {
   display: -webkit-box;
@@ -108,6 +131,7 @@ iframe {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 270px;
+  margin-left: 220px;
 
   color: #ffffff;
   font-family: Cuprum;
@@ -143,7 +167,9 @@ input:-ms-input-placeholder      {color:#ffffff;}
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  flex: 1 0 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   height: 100%;
   padding-left: 17px;
   border: none;
@@ -358,7 +384,7 @@ input[name="search"]:focus + .button-search path {
 .header-top-cart-autorized:active::before {
   opacity: 0.5;
 }
-/* Стили header-middle */
+
 .header-middle {
   background-color: #f3f7f9;
   margin-bottom: 38px;
@@ -375,7 +401,6 @@ input[name="search"]:focus + .button-search path {
           justify-content: flex-start;
 }
 
-/* Стили названия страницы */
 .index-title {
   width: 197px;
   margin: 0;
@@ -391,7 +416,6 @@ input[name="search"]:focus + .button-search path {
   line-height: 23px;
 }
 
-/* Стили блока контактов в header */
 .header-contacts p {
   margin: 0px;
   margin-right: 50px;
@@ -505,10 +529,8 @@ input[name="search"]:focus + .button-search path {
   padding: 12px 25px 12px 25px;
 
   color: #000000;
-
 }
 
-/* Стили reg-nav в каталоге */
 .reg-nav-list {
   list-style: none;
   margin: 0;
@@ -616,7 +638,6 @@ input[name="search"]:focus + .button-search path {
   margin-top: 6px;
 }
 
-/* Стили навигации в header */
 .header-bottom {
   padding-bottom: 60px;
 }
@@ -665,13 +686,10 @@ input[name="search"]:focus + .button-search path {
   opacity: 0.5;
 }
 
-/* Стилизация main */
-
 .main-content {
   margin-top: 60px;
 }
 
-/*Стили для "О компании"  */
 .about-us {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -732,7 +750,6 @@ input[name="search"]:focus + .button-search path {
   padding: 10px 40px 10px 41px;
 }
 
-/* Стили для контактов в main */
 .main-contacts {
   width: 300px;
   margin: 0;
@@ -796,10 +813,7 @@ input[name="search"]:focus + .button-search path {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-
 }
-
-/* Стили для footer */
 
 .footer-main {
   color: #f3f7f9;
@@ -808,7 +822,6 @@ input[name="search"]:focus + .button-search path {
   background-color: #32425c;
 }
 
-/* Убираем маркеры со списков */
 .footer-nav-list,
 .footer-menu-list,
 .social-list {
@@ -822,7 +835,7 @@ input[name="search"]:focus + .button-search path {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .footer-nav-list {
@@ -866,7 +879,6 @@ input[name="search"]:focus + .button-search path {
   text-decoration: none
 }
 
-/* Стили для footer-middle */
 .footer-middle{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -874,14 +886,13 @@ input[name="search"]:focus + .button-search path {
   margin-bottom: 50px;
 }
 
-/* Стили для контактов в footer */
 .footer-contacts {
   color: #f1f5f7;
   font-family: Cuprum;
   font-size: 18px;
   line-height: 24px;
 }
-/* Белый цвет для ссылки-телефона */
+
 .footer-contacts a {
   color: #f1f5f7;
 }
@@ -891,7 +902,6 @@ input[name="search"]:focus + .button-search path {
   margin: 0;
   padding: 0;
 }
-/* Стили для меню в footer  */
 
 .footer-menu-list {
   display: -webkit-box;
@@ -992,8 +1002,6 @@ input[name="search"]:focus + .button-search path {
   background-color: #ee3643;
 }
 
-/* Стили для copyright */
-
 .copyright {
   width: 230px;
   color: #ffffff;
@@ -1003,8 +1011,6 @@ input[name="search"]:focus + .button-search path {
   margin-right: 165px;
 }
 
-/* Стили для feedback */
-/* Стили для develop */
 .feedback,
 .develop {
   color: #ffffff;
@@ -1040,10 +1046,6 @@ input[name="search"]:focus + .button-search path {
   color: #ee3643;
   text-decoration: none
 }
-
-
-/* Каталог */
-/* Стили breadcrumbs */
 
 .breadcrumbs {
   display: -webkit-box;
@@ -1100,8 +1102,6 @@ input[name="search"]:focus + .button-search path {
   line-height: 18px;
   text-transform: uppercase;
 }
-
-/* Раздел сортировка */
 
 .sort {
   display: -webkit-box;
@@ -1211,7 +1211,6 @@ input[name="search"]:focus + .button-search path {
   fill: #ee3643;
 }
 
-/* Стили заголовка */
 .catalog-title {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -1223,8 +1222,6 @@ input[name="search"]:focus + .button-search path {
   text-transform: uppercase;
   background-color: #f2f6f8;
 }
-
-/* Стили каталога */
 
 .catalog {
   width: 700px;
@@ -1240,7 +1237,6 @@ input[name="search"]:focus + .button-search path {
   margin-bottom: 60px;
 }
 
-/* Стили карточки товара */
 .catalog-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1489,8 +1485,6 @@ input[name="search"]:focus + .button-search path {
   border: 3px solid #32425c;
 }
 
-/* Стили для пагинации */
-
 .pagination-list {
   list-style: none;
   padding: 0;
@@ -1543,7 +1537,6 @@ input[name="search"]:focus + .button-search path {
   text-transform: uppercase;
 }
 
-/* Стили для фильтров */
 .filter {
   width: 220px;
 }
@@ -2413,8 +2406,6 @@ input[type="radio"]:checked + .radio-indicator::after {
           animation: shake 0.6s;
 }
 
-/* Блок "Популярные товары" */
-
 .popular-wrapper,
 .brands-wrapper {
   display: -webkit-box;
@@ -2665,8 +2656,6 @@ input[type="radio"]:checked + .radio-indicator::after {
   opacity: 0.3;
 }
 
-/* Стилизация слайдера Сервисы */
-
 .service h3 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2880,13 +2869,6 @@ input[type="radio"]:checked + .radio-indicator::after {
   border: none;
 }
 
-/* .service-controls-list::after {
-  content: "";
-
-
-} */
-
-/* Стилизация слайдера promo */
 .promo-slider {
   position: relative;
   display: -webkit-box;
