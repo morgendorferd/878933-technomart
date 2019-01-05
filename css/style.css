@@ -151,7 +151,7 @@ input::-moz-placeholder {
 }
 
 input:-moz-placeholder  {
-  color: #ffffff;ы
+  color: #ffffff;
 }
 
 input:-ms-input-placeholder {
@@ -511,7 +511,6 @@ input[name="search"]:focus + .button-search path {
           box-sizing: border-box;
   width: 150px;
   padding: 12px 25px 12px 25px;
-
   color: #000000;
 }
 
@@ -682,7 +681,6 @@ input[name="search"]:focus + .button-search path {
 .info {
   width: 519px;
   margin: 0;
-
   color: #000000;
   font-family: "PT Sans","Arial", sans-serif;
   font-size: 13px;
@@ -729,7 +727,6 @@ input[name="search"]:focus + .button-search path {
 .main-contacts {
   width: 300px;
   margin: 0;
-
   color: #000000;
   font-family: "PT Sans","Arial", sans-serif;
   font-size: 13px;
@@ -826,8 +823,6 @@ input[name="search"]:focus + .button-search path {
   margin-bottom: 0px;
   padding-left: 13px;
 }
-
-
 
 .footer-nav-item a {
   margin: 10px 30px;
@@ -1012,7 +1007,7 @@ input[name="search"]:focus + .button-search path {
 .feedback a:active,
 .develop a:active {
   color: #ee3643;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .breadcrumbs {
@@ -1701,7 +1696,6 @@ input[name="search"]:focus + .button-search path {
   padding-left: 16px;
   position: relative;
   cursor: pointer;
-
 }
 
 .filter-show {
@@ -1805,7 +1799,6 @@ input[type="radio"]:checked + .radio-indicator::after {
   width: 140px;
   margin-top: 55px;
   padding: 10px 39px 10px 39px;
-
   border: 1px solid #e5e5e5;
   background-color: #ffffff;
   color: #000000;
@@ -2029,7 +2022,6 @@ input[type="radio"]:checked + .radio-indicator::after {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-
 }
 
 .modal-letter input {
@@ -2164,7 +2156,6 @@ input[type="radio"]:checked + .radio-indicator::after {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-
 
 .modal-cart {
   display: none;
@@ -2437,7 +2428,6 @@ input[type="radio"]:checked + .radio-indicator::after {
 .popular-title {
   width: 157px;
   margin: 10px auto;
-
   color: #000000;
   font-family: "PT Sans","Arial", sans-serif;
   font-size: 18px;
@@ -2720,7 +2710,6 @@ input[type="radio"]:checked + .radio-indicator::after {
   padding-top: 13px;
   padding-left: 22px;
   border-top: 2px solid #4e637c;
-
   cursor: pointer;
 }
 
@@ -2786,7 +2775,6 @@ input[type="radio"]:checked + .radio-indicator::after {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-
   height: 10px;
   text-align: center;
   z-index: 4;
