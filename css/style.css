@@ -143,19 +143,19 @@ a {
 }
 
 input::-webkit-input-placeholder {
-  color:#ffffff;
+  color: #ffffff;
 }
 
 input::-moz-placeholder {
-  color:#ffffff;
+  color: #ffffff;
 }
 
 input:-moz-placeholder  {
-  color:#ffffff;
+  color: #ffffff;ы
 }
 
 input:-ms-input-placeholder {
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .button-search {
@@ -1791,6 +1791,15 @@ input[type="radio"]:checked + .radio-indicator::after {
    opacity: 1.0;
  }
 
+ input[type="checkbox"]:focus + .checkbox-indicator::before,
+ input[type="checkbox"]:focus + .checkbox-indicator::after,
+ input[type="checkbox"]:focus ~ .checkbox-text,
+ input[type="radio"]:focus + .radio-indicator::before,
+ input[type="radio"]:focus + .radio-indicator::after,
+ input[type="radio"]:focus ~ .radio-text {
+   opacity: 1.0;
+ }
+
 .filter-show {
   width: 140px;
   margin-top: 55px;
@@ -2610,18 +2619,21 @@ input[type="radio"]:checked + .radio-indicator::after {
   background-image: url("../img/content-img/slider-delivery.png");
   background-repeat: no-repeat;
   background-position: 100% 100%;
+  background-color: #f4f8f9;
 }
 
 .slider-guarantee {
   background-image: url("../img/content-img/slider-guarantee.png");
   background-repeat: no-repeat;
   background-position: 100% 100%;
+  background-color: #f4f8f9;
 }
 
 .slider-credit {
   background-image: url("../img/content-img/slider-credit.png");
   background-repeat: no-repeat;
   background-position: 100% 100%;
+  background-color: #f4f8f9;
 }
 
 .service-slider-item h4 {
