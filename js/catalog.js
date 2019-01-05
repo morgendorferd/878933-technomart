@@ -6,7 +6,7 @@ for (var i = 0; i < cartLinkElements.length; i++) {
   cartLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     cartPopup.classList.add("modal-show");
-  })
+  });
 };
 
 cartClose.addEventListener("click", function (evt) {
