@@ -1798,6 +1798,7 @@ input[type="radio"]:checked + .radio-indicator::after {
  input[type="radio"]:focus + .radio-indicator::after,
  input[type="radio"]:focus ~ .radio-text {
    opacity: 1.0;
+   outline: 1px solid #c5c5c5;
  }
 
 .filter-show {
