@@ -84,8 +84,7 @@ window.addEventListener("keydown", function (evt) {
 
 var btnPrev = document.querySelector(".promo-slider-toggle--prev"),
     btnNext = document.querySelector(".promo-slider-toggle--next");
-// var images = Array.from(document.querySelectorAll(".promo-slide"));
-var images = Array.prototype.slice.call(document.querySelectorAll('.promo-slide'));
+var images = Array.prototype.slice.call(document.querySelectorAll(".promo-slide"));
 var shownImage = document.querySelector(".shown");
 var shownPoint = document.querySelector(".promo-slider-control--active");
 var pointsArray = document.querySelectorAll(".promo-slider-control");
