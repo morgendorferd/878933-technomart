@@ -176,7 +176,7 @@ input:-ms-input-placeholder {
           order: 1;
 }
 
-.button-search path {
+.icon-search {
   fill: #606978;
 }
 
@@ -200,11 +200,11 @@ input[name="search"]:focus + .button-search {
   background-color: #ffffff;
 }
 
-input[name="search"]:focus + .button-search path {
+input[name="search"]:focus + .button-search .icon-search {
   fill: red;
 }
 
-.header-search:hover .button-search path {
+.header-search:hover .icon-search {
   fill: #ffffff;
 }
 
@@ -2923,14 +2923,14 @@ input[type="radio"]:checked + .radio-indicator::after {
   background-color: #ba2732;
 }
 
-.promo-slide-perforator {
+.promo-slide-first {
   background-image: url("../img/content-img/slide-perforator.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-color: #decdbe;
 }
 
-.promo-slide-dreli {
+.promo-slide-second {
   background-image: url("../img/content-img/slide-dreli.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
