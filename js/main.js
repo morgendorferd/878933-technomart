@@ -1,17 +1,11 @@
 // index.html
 // переменные, связанные с формой обращения
 var contactsLink = document.querySelector(".main-contacts-link"),
-contactsPopup = document.querySelector(".modal-write-us"),
-contactsBtnClose = contactsPopup.querySelector(".modal-write-us-close"),
-contactsForm = contactsPopup.querySelector("form"),
-contactsName = contactsPopup.querySelector("input[name=Имя]"),
-contactsEmail =contactsPopup.querySelector("input[name=Почта]"),
-contactsTextarea =contactsPopup.querySelector("textarea[name=Комментарий]");
+contactsPopup = document.querySelector(".modal-write-us");
 
 // переменные, связанные с картой
 var mapLink = document.querySelector(".contacts-map"),
-mapPopup = document.querySelector(".modal-map"),
-mapClose = mapPopup.querySelector(".modal-map-close");
+mapPopup = document.querySelector(".modal-map");
 
 // переменные, используемые в catalog.html
 var cartPopup = document.querySelector(".modal-cart"),
@@ -19,7 +13,13 @@ cartClose = document.querySelector(".modal-cart-close"),
 cartLinkElements = document.querySelectorAll(".cart-link");
 
 // попап с формой обращения
-if (contactsLink, contactsPopup, contactsBtnClose, contactsForm, contactsName, contactsEmail, contactsTextarea) {
+if (contactsLink, contactsPopup) {
+  var contactsBtnClose = contactsPopup.querySelector(".modal-write-us-close"),
+  contactsForm = contactsPopup.querySelector("form"),
+  contactsName = contactsPopup.querySelector("input[name=Имя]"),
+  contactsEmail =contactsPopup.querySelector("input[name=Почта]"),
+  contactsTextarea =contactsPopup.querySelector("textarea[name=Комментарий]");
+
   var isStorageSupport = true;
   var storage = "";
 
@@ -72,7 +72,9 @@ if (contactsLink, contactsPopup, contactsBtnClose, contactsForm, contactsName, c
 }
 
 // попап с картой
-if (mapLink, mapPopup, mapClose) {
+if (mapLink, mapPopup) {
+  var mapClose = mapPopup.querySelector(".modal-map-close");
+
   mapLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     mapPopup.classList.add("modal-show");
