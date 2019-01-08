@@ -96,70 +96,73 @@ if (mapLink, mapPopup) {
 }
 
 // слайдер
-(function () {
+var slider = document.querySelector(".promo-slider");
+  if (slider) { (function () {
 
-var btnPrev = document.querySelector(".promo-slider-toggle--prev"),
-    btnNext = document.querySelector(".promo-slider-toggle--next");
-var images = Array.prototype.slice.call(document.querySelectorAll(".promo-slide"));
-var shownImage = document.querySelector(".shown");
-var shownPoint = document.querySelector(".promo-slider-control--active");
-var pointsArray = document.querySelectorAll(".promo-slider-control");
-var counter = images.indexOf(shownImage);
+    var btnPrev = document.querySelector(".promo-slider-toggle--prev"),
+        btnNext = document.querySelector(".promo-slider-toggle--next");
+    var images = Array.prototype.slice.call(document.querySelectorAll(".promo-slide"));
+    var shownImage = document.querySelector(".shown");
+    var shownPoint = document.querySelector(".promo-slider-control--active");
+    var pointsArray = document.querySelectorAll(".promo-slider-control");
+    var counter = images.indexOf(shownImage);
 
-btnPrev.addEventListener("click", function() {
+    btnPrev.addEventListener("click", function() {
 
-    if (counter === 0) {
-      images[counter].classList.remove("shown");
-      pointsArray[counter].classList.remove("promo-slider-control--active");
-      counter = images.length - 1;
-    } else {
-      images[counter].classList.remove("shown");
-      pointsArray[counter].classList.remove("promo-slider-control--active");
-      counter--;
-    }
-
-    images[counter].classList.add("shown");
-    pointsArray[counter].classList.add("promo-slider-control--active");
-});
-
-btnNext.addEventListener("click", function() {
-
-    if (counter === images.length - 1) {
-        images[counter].classList.remove("shown");
-        pointsArray[counter].classList.remove("promo-slider-control--active");
-        counter = 0;
-    } else {
-      images[counter].classList.remove("shown");
-      pointsArray[counter].classList.remove("promo-slider-control--active");
-      counter++;
-    }
-
-    images[counter].classList.add("shown");
-    pointsArray[counter].classList.add("promo-slider-control--active");
-});
-
-let slideThroughPoints = function () {
-  [].forEach.call(pointsArray, function(point, index) {
-    point.addEventListener("click", function (evt) {
-      if (index === counter) {
-          evt.preventDefault();
-          return;
-      } else {
-          pointsArray[counter].classList.remove("promo-slider-control--active");
+        if (counter === 0) {
           images[counter].classList.remove("shown");
-          counter = index;
-          images[index].classList.add("shown");
-          point.classList.add("promo-slider-control--active");
-            btnNext.disabled = false;
-            btnPrev.disabled = false;
-      }
+          pointsArray[counter].classList.remove("promo-slider-control--active");
+          counter = images.length - 1;
+        } else {
+          images[counter].classList.remove("shown");
+          pointsArray[counter].classList.remove("promo-slider-control--active");
+          counter--;
+        }
+
+        images[counter].classList.add("shown");
+        pointsArray[counter].classList.add("promo-slider-control--active");
     });
-  });
-};
 
-slideThroughPoints();
+    btnNext.addEventListener("click", function() {
 
-})();
+        if (counter === images.length - 1) {
+            images[counter].classList.remove("shown");
+            pointsArray[counter].classList.remove("promo-slider-control--active");
+            counter = 0;
+        } else {
+          images[counter].classList.remove("shown");
+          pointsArray[counter].classList.remove("promo-slider-control--active");
+          counter++;
+        }
+
+        images[counter].classList.add("shown");
+        pointsArray[counter].classList.add("promo-slider-control--active");
+    });
+
+    let slideThroughPoints = function () {
+      [].forEach.call(pointsArray, function(point, index) {
+        point.addEventListener("click", function (evt) {
+          if (index === counter) {
+              evt.preventDefault();
+              return;
+          } else {
+              pointsArray[counter].classList.remove("promo-slider-control--active");
+              images[counter].classList.remove("shown");
+              counter = index;
+              images[index].classList.add("shown");
+              point.classList.add("promo-slider-control--active");
+                btnNext.disabled = false;
+                btnPrev.disabled = false;
+          }
+        });
+      });
+    };
+
+    slideThroughPoints();
+
+    })();
+}
+
 
 // catalog.html
 
