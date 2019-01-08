@@ -161,9 +161,8 @@ var slider = document.querySelector(".promo-slider");
 
     slideThroughPoints();
 
-
-}
-
+    
+};
 
 // catalog.html
 
