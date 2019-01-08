@@ -99,7 +99,7 @@ if (mapLink, mapPopup) {
 
 // слайдер
 var slider = document.querySelector(".promo-slider");
-  if (slider)
+  if (slider) {
     var btnPrev = document.querySelector(".promo-slider-toggle--prev"),
         btnNext = document.querySelector(".promo-slider-toggle--next");
     var images = Array.prototype.slice.call(document.querySelectorAll(".promo-slide"));
@@ -140,7 +140,7 @@ var slider = document.querySelector(".promo-slider");
         pointsArray[counter].classList.add("promo-slider-control--active");
     });
 
-    let slideThroughPoints = function () {
+    var slideThroughPoints = function () {
       [].forEach.call(pointsArray, function(point, index) {
         point.addEventListener("click", function (evt) {
           if (index === counter) {
@@ -161,8 +161,9 @@ var slider = document.querySelector(".promo-slider");
 
     slideThroughPoints();
 
-    
+
 };
+
 
 // catalog.html
 
