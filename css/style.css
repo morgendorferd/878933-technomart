@@ -233,6 +233,10 @@ input[name="search"]:focus + .button-search .icon-search {
   padding: 0;
 }
 
+.header-top-item {
+  height: inherit;
+}
+
 .header-top-item a {
   width: auto;
   color: #ffffff;
@@ -243,7 +247,6 @@ input[name="search"]:focus + .button-search .icon-search {
 
 .header-top-order {
   width: 150px;
-  height: inherit;
   margin: 0;
   padding: 12px 21px 12px;
   -webkit-box-sizing: border-box;
@@ -270,7 +273,6 @@ input[name="search"]:focus + .button-search .icon-search {
 
 .header-top-bookmarks {
   position: relative;
-  height: inherit;
   margin-left: 5px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -301,7 +303,6 @@ input[name="search"]:focus + .button-search .icon-search {
 }
 
 .header-top-cart {
-  height: inherit;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -347,7 +348,6 @@ input[name="search"]:focus + .button-search .icon-search {
 
 .header-top-cart-autorized {
   position: relative;
-  height: inherit;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 48px;
