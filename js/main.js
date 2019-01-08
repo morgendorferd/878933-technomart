@@ -7,9 +7,10 @@ contactsEmail =contactsPopup.querySelector("input[name=Почта]"),
 contactsTextarea =contactsPopup.querySelector("textarea[name=Комментарий]"),
 mapLink = document.querySelector(".contacts-map"),
 mapPopup = document.querySelector(".modal-map"),
-mapClose = document.querySelector(".modal-map-close"),
-cartPopup = document.querySelector(".modal-cart");
-var cartClose = document.querySelector(".modal-cart-close"),
+mapClose = document.querySelector(".modal-map-close");
+
+var cartPopup = document.querySelector(".modal-cart"),
+cartClose = document.querySelector(".modal-cart-close"),
 cartLinkElements = document.querySelectorAll(".cart-link");
 
 var isStorageSupport = true;
@@ -150,6 +151,9 @@ slideThroughPoints();
 
 })();
 
+
+if (cartLinkElements, cartClose, cartPopup) {
+
 for (var i = 0; i < cartLinkElements.length; i++) {
   var cartLink = cartLinkElements[i];
   cartLink.addEventListener("click", function (evt) {
@@ -171,3 +175,4 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+}
