@@ -8,8 +8,9 @@ contactsTextarea =contactsPopup.querySelector("textarea[name=Комментар�
 mapLink = document.querySelector(".contacts-map"),
 mapPopup = document.querySelector(".modal-map"),
 mapClose = document.querySelector(".modal-map-close"),
-cartLink = document.querySelector(".cart-link"),
 cartPopup = document.querySelector(".modal-cart");
+var cartClose = document.querySelector(".modal-cart-close"),
+cartLinkElements = document.querySelectorAll(".cart-link");
 
 var isStorageSupport = true;
 var storage = "";
@@ -29,7 +30,11 @@ contactsLink.addEventListener("click", function (evt) {
     contactsEmail.focus();
   } else {
     contactsName.focus();
-  }
+  };
+
+  if (contactsPopup == "undefined") {
+    console.log ("Undefined")
+}
 });
 
 contactsBtnClose.addEventListener("click", function (evt) {
@@ -144,3 +149,25 @@ let slideThroughPoints = function () {
 slideThroughPoints();
 
 })();
+
+for (var i = 0; i < cartLinkElements.length; i++) {
+  var cartLink = cartLinkElements[i];
+  cartLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    cartPopup.classList.add("modal-show");
+  });
+};
+
+cartClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  cartPopup.classList.remove("modal-show");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (cartPopup.classList.contains("modal-show")) {
+      cartPopup.classList.remove("modal-show");
+    }
+  }
+});

@@ -3061,38 +3061,88 @@ input[type="radio"]:checked + .radio-indicator::after {
 }
 
 .promo-materials {
+  position: relative;
   background-color: #ffbf47;
-  background-image: url("../img/content-img/materials.png");
+}
+
+.promo-materials:before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 43px;
+  width: 44px;
+  height: 65px;
+  background-image: url("../img/svg/icon-1.svg");
   background-repeat: no-repeat;
-  background-position: 84% 55%;
+  background-position: 0 0;
 }
 
 .promo-tools {
+  position: relative;
   background-color: #3bbce3;
-  background-image: url("../img/content-img/tools.png");
+}
+
+.promo-tools:before {
+  content: "";
+  position: absolute;
+  top: 33px;
+  right: 30px;
+  width: 75px;
+  height: 61px;
+  background-image: url("../img/svg/icon-2.svg");
   background-repeat: no-repeat;
-  background-position: 87% 55%;
+  background-position: 0 0;
 }
 
 .promo-tech {
+  position: relative;
   background-color: #dc91d8;
-  background-image: url("../img/content-img/tech.png");
+}
+
+.promo-tech:before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 32px;
+  width: 78px;
+  height: 62px;
+  background-image: url("../img/svg/icon-3.svg");
   background-repeat: no-repeat;
-  background-position: 87% 55%;
+  background-position: 0 0;
 }
 
 .promo-discount {
+  position: relative;
   background-color: #8ed78f;
-  background-image: url("../img/content-img/discount.png");
+}
+
+.promo-discount:before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 45px;
+  width: 59px;
+  height: 72px;
+  background-image: url("../img/svg/icon-4.svg");
   background-repeat: no-repeat;
-  background-position: 80% 55%;
+  background-position: 0 0;
 }
 
 .promo-delivery {
+  position: relative;
   background-color: #ffc047;
-  background-image: url("../img/content-img/delivery.png");
+}
+
+.promo-delivery:before {
+  content: "";
+  position: absolute;
+  top: 31px;
+  right: 33px;
+  width: 78px;
+  height: 63px;
+  background-image: url("../img/svg/icon-5.svg");
   background-repeat: no-repeat;
-  background-position: 87% 55%;
+  background-position: 0 0;
 }
 
 .banner-new {
