@@ -196,7 +196,7 @@ input[type="search"]:hover {
   color: #ffffff;
 }
 
-input[name="search"]:hover + .button-search {
+input[type="search"]:hover + .button-search {
   background-color: #212a3a;
 }
 
@@ -207,11 +207,11 @@ input[type="search"]:focus {
   outline: none;
 }
 
-input[name="search"]:focus + .button-search {
+input[type="search"]:focus + .button-search {
   background-color: #ffffff;
 }
 
-input[name="search"]:focus + .button-search .icon-search {
+input[type="search"]:focus + .button-search .icon-search {
   fill: red;
 }
 
