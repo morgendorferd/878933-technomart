@@ -120,6 +120,7 @@ a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 270px;
+  height: inherit;
   color: #ffffff;
   font-family: "Cuprum","Arial", sans-serif;
   font-size: 17px;
@@ -127,6 +128,16 @@ a {
   line-height: 18px;
   background-color: #293449;
   border: none;
+}
+
+.header-search-input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.header-search-input::-ms-clear {
+  display: none;
+  width : 0;
+  height: 0;
 }
 
 .header-search-input {
@@ -232,6 +243,7 @@ input[name="search"]:focus + .button-search .icon-search {
 
 .header-top-order {
   width: 150px;
+  height: inherit;
   margin: 0;
   padding: 12px 21px 12px;
   -webkit-box-sizing: border-box;
@@ -258,6 +270,7 @@ input[name="search"]:focus + .button-search .icon-search {
 
 .header-top-bookmarks {
   position: relative;
+  height: inherit;
   margin-left: 5px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -288,6 +301,7 @@ input[name="search"]:focus + .button-search .icon-search {
 }
 
 .header-top-cart {
+  height: inherit;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -333,6 +347,7 @@ input[name="search"]:focus + .button-search .icon-search {
 
 .header-top-cart-autorized {
   position: relative;
+  height: inherit;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 48px;

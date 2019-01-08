@@ -1,3 +1,5 @@
+(function () {
+
 // index.html
 // переменные, связанные с формой обращения
 var contactsLink = document.querySelector(".main-contacts-link"),
@@ -97,7 +99,7 @@ if (mapLink, mapPopup) {
 
 // слайдер
 var slider = document.querySelector(".promo-slider");
-  if (slider) { (function () {
+  if (slider) {
 
     var btnPrev = document.querySelector(".promo-slider-toggle--prev"),
         btnNext = document.querySelector(".promo-slider-toggle--next");
@@ -160,7 +162,7 @@ var slider = document.querySelector(".promo-slider");
 
     slideThroughPoints();
 
-    })();
+
 }
 
 
@@ -190,3 +192,5 @@ if (cartLinkElements, cartClose, cartPopup) {
     }
   });
 }
+
+})();
