@@ -9,6 +9,7 @@ mapLink = document.querySelector(".contacts-map"),
 mapPopup = document.querySelector(".modal-map"),
 mapClose = document.querySelector(".modal-map-close");
 
+// переменные, используемые в catalog.html
 var cartPopup = document.querySelector(".modal-cart"),
 cartClose = document.querySelector(".modal-cart-close"),
 cartLinkElements = document.querySelectorAll(".cart-link");
@@ -151,28 +152,29 @@ slideThroughPoints();
 
 })();
 
+// catalog.html
 
 if (cartLinkElements, cartClose, cartPopup) {
 
-for (var i = 0; i < cartLinkElements.length; i++) {
-  var cartLink = cartLinkElements[i];
-  cartLink.addEventListener("click", function (evt) {
+  for (var i = 0; i < cartLinkElements.length; i++) {
+    var cartLink = cartLinkElements[i];
+    cartLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      cartPopup.classList.add("modal-show");
+    });
+  };
+
+  cartClose.addEventListener("click", function (evt) {
     evt.preventDefault();
-    cartPopup.classList.add("modal-show");
+    cartPopup.classList.remove("modal-show");
   });
-};
 
-cartClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  cartPopup.classList.remove("modal-show");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (cartPopup.classList.contains("modal-show")) {
-      cartPopup.classList.remove("modal-show");
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (cartPopup.classList.contains("modal-show")) {
+        cartPopup.classList.remove("modal-show");
+      }
     }
-  }
-});
+  });
 }
