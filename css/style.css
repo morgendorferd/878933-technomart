@@ -1367,7 +1367,8 @@ input[name="search"]:focus + .button-search .icon-search {
   display: none;
 }
 
-.cart-link {
+.cart-link,
+.cart-link-popular {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
