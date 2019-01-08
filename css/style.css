@@ -220,6 +220,7 @@ input[type="search"]:focus + .button-search .icon-search {
 }
 
 .header-top-list {
+  height: inherit;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,7 +284,8 @@ input[type="search"]:focus + .button-search .icon-search {
 .header-top-bookmarks::before {
   content: "";
   position: absolute;
-  top: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 12px;
   width: 14px;
   height: 16px;
@@ -315,7 +317,8 @@ input[type="search"]:focus + .button-search .icon-search {
 .header-top-cart::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 18px;
   width: 14px;
   height: 16px;
@@ -362,7 +365,8 @@ input[type="search"]:focus + .button-search .icon-search {
 .header-top-cart-autorized::before {
   content: "";
   position: absolute;
-  top: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 18px;
   width: 14px;
   height: 16px;
