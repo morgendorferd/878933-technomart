@@ -285,7 +285,9 @@ input[type="search"]:focus + .button-search .icon-search {
   content: "";
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 12px;
   width: 14px;
   height: 16px;
@@ -318,7 +320,9 @@ input[type="search"]:focus + .button-search .icon-search {
   content: "";
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 18px;
   width: 14px;
   height: 16px;
@@ -366,7 +370,9 @@ input[type="search"]:focus + .button-search .icon-search {
   content: "";
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 18px;
   width: 14px;
   height: 16px;

@@ -99,8 +99,7 @@ if (mapLink, mapPopup) {
 
 // слайдер
 var slider = document.querySelector(".promo-slider");
-  if (slider) {
-
+  if (slider)
     var btnPrev = document.querySelector(".promo-slider-toggle--prev"),
         btnNext = document.querySelector(".promo-slider-toggle--next");
     var images = Array.prototype.slice.call(document.querySelectorAll(".promo-slide"));
